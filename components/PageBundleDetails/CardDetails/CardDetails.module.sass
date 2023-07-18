@@ -1,0 +1,152 @@
+@import ../../../styles/helpers
+
+.section
+    +d
+        padding-top: 100px
+    +t
+        margin-bottom: 84px
+    +m
+        padding-top: 88px
+        margin-bottom: 64px
+
+.preview
+    margin: 0 -30px 100px
+    overflow: hidden
+    +d
+        margin: 0 -20px 48px
+    +t
+        margin: 0 0 32px
+
+.wrapper
+    margin: 0 56px
+    +d
+        margin: 0 24px
+    +m
+        margin: 0 0
+
+.head
+    display: flex
+    align-items: flex-end
+    margin-bottom: 40px
+    padding-bottom: 40px
+    border-bottom: 1px solid $n4
+    +dark
+        border-color: $n7
+    +d
+        margin-bottom: 32px
+        padding-bottom: 32px
+        border-bottom: 0
+    +t
+        margin-bottom: 40px
+        padding-bottom: 0
+
+    .button
+        margin: 0 0 8px 40px
+    +a
+        display: block
+        .button
+            margin: 16px 0 0 0
+            width: 100%
+
+.description
+    flex-grow: 1
+
+.row
+    display: flex
+    +t
+        display: block
+
+.col
+    +nl
+        .category
+            +t
+                margin-bottom: 32px
+            +m
+                display: none
+    +nf
+        +t
+            margin-top: 32px
+            .category
+                margin-bottom: 24px
+                padding-bottom: 24px
+                border-bottom: 1px solid $n4
+                +dark
+                    border-color: $n7
+    &:nth-child(1)
+        flex-grow: 1
+        padding-right: 128px
+        +d
+            padding-right: 48px
+        +t
+            padding-right: 0
+    &:nth-child(2)
+        flex: 0 0 528px
+
+.category
+    margin-bottom: 40px
+
+.wrap
+    margin-bottom: 32px
+    .label
+        margin-bottom: 12px
+
+.content
+    +t
+        display: flex
+        flex-wrap: wrap
+        .info
+            width: 50%
+            padding-right: 24px
+            margin-bottom: 48px
+        .wrap
+            width: 50%
+            padding-left: 12px
+        .list
+            width: 100%
+            column-count: 2
+    +m
+        display: block
+        .info, .wrap
+            width: 100%
+            padding: 0
+            margin: 0 0 24px 0
+        .list
+            column-count: 1
+
+.compound
+    display: flex
+
+.img
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 102px
+    height: 102px
+    border-radius: 16px
+    &:not(:last-child)
+        margin-right: 24px
+
+.item
+    &:not(:last-child)
+        margin-bottom: 32px
+        padding-bottom: 32px
+        border-bottom: 1px solid $n4
+        +dark
+            border-color: $n7
+
+.label
+    margin-bottom: 20px
+    +base2
+    color: $n5
+
+.parameters
+    +m
+        display: block
+    > div
+        +t
+            margin-right: 22px
+            width: 50%
+            overflow: hidden
+        +m
+            margin-right: 0
+            width: 100%

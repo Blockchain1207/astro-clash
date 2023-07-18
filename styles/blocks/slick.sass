@@ -1,0 +1,173 @@
+.slick-slider
+    position: relative
+    display: block
+    box-sizing: border-box
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    -webkit-touch-callout: none
+    -khtml-user-select: none
+    -ms-touch-action: pan-y
+    touch-action: pan-y
+    -webkit-tap-highlight-color: transparent
+
+.slick-list
+    position: relative
+    display: block
+    overflow: hidden
+    margin: 0
+    padding: 0
+
+    &:focus
+        outline: none
+
+    &.dragging
+        cursor: pointer
+        cursor: grab
+
+.slick-slider
+    .slick-track, .slick-list
+        -webkit-transform: translate3d(0, 0, 0)
+        -moz-transform: translate3d(0, 0, 0)
+        -ms-transform: translate3d(0, 0, 0)
+        -o-transform: translate3d(0, 0, 0)
+        transform: translate3d(0, 0, 0)
+
+.slick-track
+    position: relative
+    top: 0
+    left: 0
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+    &:before
+        display: table
+        content: ''
+
+    &:after
+        display: table
+        content: ''
+        clear: both
+
+.slick-loading .slick-track
+    visibility: hidden
+
+.slick-slide
+    display: none
+    float: left
+    height: 100%
+    min-height: 1px
+
+[dir='rtl'] .slick-slide
+    float: right
+
+.slick-slide
+    img
+        display: block
+
+    &.slick-loading img
+        display: none
+
+    &.dragging img
+        pointer-events: none
+
+.slick-initialized .slick-slide
+    display: block
+
+.slick-loading .slick-slide
+    visibility: hidden
+
+.slick-vertical .slick-slide
+    display: block
+    height: auto
+    border: 1px solid transparent
+
+.slick-arrow.slick-hidden
+    display: none
+
+.slick-arrow
+    position: absolute
+    z-index: 2
+    width: 32px
+    height: 32px
+    background: none
+    font-size: 0
+    transition: all .2s
+    svg
+        position: relative
+        z-index: 2
+        fill: $n8
+        transition: fill .2s
+        +dark-common
+            fill: $n2
+    &:hover
+        svg
+            fill: $purple
+
+.slick-dots
+    display: flex !important
+    justify-content: center
+    li
+        display: flex
+        font-size: 0
+        button
+            position: relative
+            width: 40px
+            height: 12px
+            background: none
+            font-size: 0
+            &:before
+                content: ""
+                position: absolute
+                top: 50%
+                left: 50%
+                width: 40px
+                height: 6px
+                border-radius: 6px
+                border: 3px solid $n4
+                transform: translate(-50%,-50%)
+                transition: height .2s
+                +dark-common
+                    border-color: $n7
+        &.slick-active
+            button
+                &:before
+                    height: 12px
+                    border: 4px solid $red
+        &:not(:last-child)
+            margin-right: 24px
+
+// details slider
+.details-slider
+    .slick-list
+        overflow: visible
+    .slick-dots
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 40px
+
+// popular slider
+.popular-slider
+    padding-bottom: 62px
+    margin: 0 -17px
+    +t
+        margin: 0 -7px
+    +m
+        margin: 0 -16px
+    .slick-slide
+        padding: 0 17px
+        +t
+            padding: 0 8px
+        +m
+            &:not(.slick-active)
+                .details_bottom
+                    opacity: 0
+    .slick-arrow
+        bottom: 0
+    .slick-prev
+        left: calc(50% - 40px)
+    .slick-next
+        right: calc(50% - 40px)

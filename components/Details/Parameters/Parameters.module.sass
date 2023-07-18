@@ -1,0 +1,46 @@
+@import ../../../styles/helpers
+
+.parameters
+    display: flex
+
+.parameter
+    +nl
+        margin-right: 40px
+
+.label
+    margin-bottom: 12px
+    +base2
+    color: $n5
+
+.line
+    display: flex
+
+.avatars
+    display: flex
+    flex-wrap: wrap
+    margin: -6px 0 0 -12px
+
+.avatar,
+.preview
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 48px
+    height: 48px
+    flex-shrink: 0
+    border-radius: 50%
+    overflow: hidden
+
+.avatar
+    margin: 6px 0 0 12px
+
+.preview
+    margin-right: 12px
+
+.title
+    padding-top: 2px
+    +base1
+
+.content
+    +caption2
+    color: $n5

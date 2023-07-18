@@ -1,0 +1,46 @@
+@import ../../styles/helpers
+
+.main
+    margin-bottom: 0
+
+.container
+    padding: 80px 64px 0
+    +t
+        padding: 72px 64px 0
+    +m
+        padding: 44px 16px 0
+
+.section
+    margin-bottom: 80px
+
+.title
+    margin-bottom: 16px
+    text-align: center
+    +m
+        +h2
+
+.date
+    color: $n6
+    text-align: center
+    +dark
+        color: $n5
+
+.note
+    margin-bottom: 32px
+    color: $n6
+    +dark
+        color: $n5
+
+.download
+    display: flex
+    align-items: center
+    color: $red
+    +base1
+    .icon
+        margin-right: 12px
+        fill: $red
+
+.content
+    p
+        +nl
+            margin-bottom: 24px

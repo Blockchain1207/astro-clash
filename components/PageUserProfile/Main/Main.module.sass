@@ -1,0 +1,98 @@
+@import ../../../styles/helpers
+
+.container
+    margin-bottom: 78px
+    padding: 0 40px
+    +m
+        padding: 0 16px
+        margin-bottom: 32px
+
+.profile
+    margin-top: -54px
+    padding: 0 80px
+    display: flex
+    align-items: flex-end
+    +t
+        padding: 0 32px
+    +m
+        margin-top: -42px
+        flex-direction: column
+        align-items: center
+
+.avatar
+    position: relative
+    z-index: 1
+    flex-shrink: 0
+    margin-right: 20px
+    box-shadow: 0 0 0 4px rgba($n1, .5)
+    border-radius: 50%
+    overflow: hidden
+    line-height: 0
+    +dark
+        box-shadow: 0 0 0 4px rgba(#000, .2)
+    +m
+        box-shadow: 0 0 0 2px rgba($n1, .5)
+        margin-bottom: 20px
+        margin-right: 0
+        width: 80px
+        height: 80px
+        +dark
+            box-shadow: 0 0 0 2px rgba(#000, .2)
+
+.upload
+    position: absolute
+    z-index: 1
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    opacity: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    background: rgba($n9, .9)
+    +trans
+    &:hover
+        opacity: 1
+    svg
+        fill: $n1
+
+.name
+    margin-bottom: 4px
+    +m
+        text-align: center
+
+.code
+    display: flex
+    align-items: center
+    +base2
+    color: $n5
+    &::before
+        content: ""
+        display: inline-block
+        width: 12px
+        height: 12px
+        margin-right: 8px
+        border-radius: 50%
+        background: $green
+    +m
+        margin-bottom: 20px
+
+.copy
+    margin-left: 8px
+    line-height: 0
+    background: transparent
+    &:hover
+        svg
+            fill: $n8
+            +dark
+                fill: $n2
+    svg
+        fill: $n5
+        +trans
+
+.share
+    margin: 0 0 28px auto
+    +m
+        margin: 0 auto

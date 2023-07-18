@@ -1,0 +1,72 @@
+@import ../../styles/helpers
+
+.join
+    position: relative
+    margin-bottom: 40px
+
+.inner
+    position: relative
+    display: flex
+    overflow: hidden
+    border-radius: 32px
+    +m
+        border-radius: 12px
+
+.preview
+    position: relative
+    height: 743px
+    width: 100%
+    +d
+        height: 600px
+
+.wrap
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    padding: 96px 64px
+    text-align: center
+    color: $n1
+    +m
+        padding: 32px 64px
+
+.title
+    margin-bottom: 8px
+    +m
+        +h2
+
+.description
+    margin-bottom: 42px
+    font-size: 24px
+    line-height: 32px
+    letter-spacing: -.02em
+    font-weight: 500
+    +t
+        +body2
+
+.socials
+    display: flex
+    justify-content: center
+
+.social
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 48px
+    height: 48px
+    background: $n2
+    border-radius: 50%
+    svg
+        fill: $n8
+        transition: fill .2s
+    +t
+        width: 40px
+        height: 40px
+    &:hover
+        svg
+            fill: $blue
+    +nl
+        margin-right: 24px
+        +t
+            margin-right: 20px

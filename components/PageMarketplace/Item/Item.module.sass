@@ -1,0 +1,40 @@
+@import ../../../styles/helpers
+
+.item
+    display: flex
+    align-items: center
+    padding: 26px 26px 26px 68px
+    +nl
+        border-right: 1px solid $n4
+        +dark
+            border-color: $n7
+    +d
+        padding: 26px 26px 26px 44px
+    +m
+        padding: 32px 24px
+        +nl
+            border-right: none
+            border-bottom: 1px solid $n4
+
+.preview
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 64px
+    height: 64px
+    margin-right: 20px
+    border-radius: 50%
+    overflow: hidden
+
+.title
+    margin-bottom: 4px
+    +base1
+    color: $n5
+
+.price
+    margin-left: 4px
+    font-size: 20px
+    color: $n5
+    +d
+        display: none

@@ -1,0 +1,80 @@
+@import ../../../../styles/helpers
+
+.item, .grouped
+    +nl
+        margin-bottom: 40px
+        padding-bottom: 40px
+        border-bottom: 1px solid $n4
+        +dark
+            border-color: $n7
+        +m
+            margin-bottom: 24px
+            padding-bottom: 24px
+
+.grouped
+    +t
+        display: flex
+        .item
+            flex-shrink: 1
+            margin-bottom: 0
+            width: 50%
+            padding-bottom: 0
+            border: none
+    +m
+        display: block
+        .item
+            width: 100%
+            +nl
+                margin-bottom: 24px
+                padding-bottom: 24px
+                border-bottom: 1px solid $n4
+                +dark
+                    border-color: $n7
+
+.category
+    margin-bottom: 20px
+    +base2
+    color: $n5
+
+.add
+    display: flex
+    align-items: center
+    background: none
+    +base2
+    color: $n8
+    &:hover
+        .icon
+            border-color: $n8
+            +dark
+                border-color: $n6
+    +dark
+        color: $n2
+
+.icon
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 48px
+    height: 48px
+    margin-right: 16px
+    border-radius: 50%
+    border: 2px solid $n4
+    border-radius: 50%
+    transition: border-color .2s
+    +dark
+        border-color: $n7
+        svg
+            fill: $n2
+
+.parameters
+    > div
+        margin-right: 4px !important
+        width: 33.333%
+
+        +t
+            margin-right: 0 !important
+            width: 50%
+        +m
+            +nf
+                overflow: hidden
+                margin-left: 14px !important

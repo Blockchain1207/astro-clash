@@ -1,0 +1,94 @@
+@import ../../../styles/helpers
+
+.section
+    padding: 160px 0 200px
+    +d
+        padding: 128px 0 144px
+    +m
+        padding: 128px 0 32px
+
+.images
+    position: relative
+    margin-bottom: 48px
+
+.preview
+    &:nth-child(1)
+        position: relative
+        text-align: center
+        &:before
+            content: ""
+            position: absolute
+            top: 50%
+            left: 50%
+            z-index: -1
+            width: 291px
+            height: 291px
+            transform: translate(-50%,-52%)
+            border-radius: 50%
+            background: $blue
+    &:nth-child(2)
+        top: 43%
+        left: calc(50% - 345px)
+    &:nth-child(3)
+        top: -21.5%
+        left: calc(50% - 240px)
+    &:nth-child(4)
+        right: calc(50% - 213px)
+        bottom: 19%
+        +m
+            right: calc(50% - 170px)
+    &:not(:nth-child(1))
+        position: absolute
+
+.title
+    max-width: 560px
+    margin: 0 auto 80px
+    text-align: center
+    +d
+        margin: 0 auto 112px
+        +h2
+    +t
+        margin: 0 auto 52px
+        +h3
+
+.list
+    display: flex
+    margin: 0 -32px
+    +t
+        width: 100%
+        max-width: 80%
+        margin: 0 auto
+        display: block
+
+.item
+    display: flex
+    flex: 0 0 33.333%
+    width: 33.333%
+    padding: 0 32px
+    +t
+        width: 100%
+        padding: 0 0 32px 0
+        +nf
+            padding: 32px 0
+    +nl
+        border-right: 1px solid $n4
+        +t
+            border-right: none
+            border-bottom: 1px solid $n4
+        +dark
+            border-color: $n7
+
+.number
+    flex-shrink: 0
+    width: 64px
+    margin-right: 24px
+    +d
+        width: 40px
+        +h1
+
+.content
+    color: $n5
+    +d
+        max-width: 160px
+    +t
+        max-width: 100%

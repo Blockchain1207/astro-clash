@@ -1,0 +1,55 @@
+@import ../../styles/helpers
+
+.catalog
+    margin-bottom: 64px
+
+.head
+    margin-bottom: 64px
+    padding-bottom: 25px
+    border-bottom: 1px solid $n4
+    +d
+        margin-bottom: 40px
+    +t
+        margin-bottom: 32px
+        padding-bottom: 0
+        border: none
+    .container
+        display: flex
+        align-items: flex-end
+        +t
+            display: block
+    +dark
+        border-color: $n7
+
+.nav
+    display: flex
+    margin: 0 auto -26px -32px
+    flex-shrink: 0
+    +t
+        margin: 0 -16px 32px -24px
+        overflow-x: auto
+        -ms-overflow-style: none
+        scrollbar-width: none
+        -webkit-overflow-scrolling: touch
+        &::-webkit-scrollbar
+            display: none
+
+.actions
+    display: flex
+    +t
+        width: 100%
+
+.form
+    max-width: 336px
+    width: 100%
+    flex-shrink: 1 !important
+    +t
+        max-width: 100%
+
+.sort
+    margin: 80px 0 48px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +m
+        display: none

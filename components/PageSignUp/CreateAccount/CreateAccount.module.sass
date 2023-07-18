@@ -1,0 +1,46 @@
+@import ../../../styles/helpers
+
+.title
+    margin-bottom: 18px
+    +t
+        margin-bottom: 12px
+        +h3
+
+.note, .list
+    margin-bottom: 40px
+
+.body
+    margin-bottom: 20px
+
+.input
+    position: relative
+    margin-bottom: 20px
+    input
+        height: 56px
+        padding: 0 16px 0 52px
+        border: 1px solid $n4
+        background-color: $n3
+        color: $n6
+        +dark
+            border: none
+            color: $n2
+            background-color: $n7
+    svg
+        position: absolute
+        top: calc(50% - 12px)
+        left: 16px
+        fill: $n6
+        +dark
+            fill: $n5
+
+.button
+    width: 100%
+
+.footer
+    text-align: center
+    color: $n5
+    max-width: 240px
+    margin: 0 auto
+    +base2S
+    a
+        color: $red

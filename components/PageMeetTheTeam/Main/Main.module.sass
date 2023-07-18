@@ -1,0 +1,62 @@
+@import ../../../styles/helpers
+
+.section
+    +m
+        margin-bottom: 48px
+
+.container
+    max-width: 1408px
+    padding: 0 64px
+    +t
+        padding: 0 16px
+
+.inner
+    position: relative
+    display: flex
+    overflow: hidden
+    border-radius: 32px
+
+.wrapper
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: 100%
+    padding: 96px 64px 64px
+    display: flex
+    align-items: center
+    flex-direction: column
+    text-align: center
+    color: $n1
+    +t
+        padding: 80px 32px 32px
+
+.preview
+    width: 1280px
+    height: 760px
+    +t
+        height: 590px
+        width: 100%
+        img
+            margin: 0 -120px
+
+.title
+    margin-bottom: 12px
+    max-width: 700px
+    +t
+        +h1
+    +m
+        +h2
+
+.description
+    +body1
+    +m
+        +body2
+
+.scroll
+    margin-top: auto
+    +t
+        display: none !important
+    svg
+        path
+            stroke: $n1

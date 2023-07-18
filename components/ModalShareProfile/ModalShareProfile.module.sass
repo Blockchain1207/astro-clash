@@ -1,0 +1,68 @@
+@import ../../styles/helpers
+
+.wrapper
+    padding-top: 64px
+
+.title
+    margin: 0 auto 20px auto
+    max-width: 340px
+    text-align: center
+
+.links
+    margin-bottom: 32px
+    display: flex
+    align-items: center
+    justify-content: center
+
+.social
+    margin: 0 8px
+    width: 56px
+    height: 56px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    +trans
+    +m
+        height: 40px
+        width: 40px
+    &:hover
+        transform: scale(1.1)
+
+.note
+    margin-bottom: 16px
+    +base2S
+    color: $n5
+
+.copy
+    position: relative
+    svg
+        position: absolute
+        top: calc(50% - 12px)
+        left: 8px
+        fill: $n6
+    .button
+        position: absolute
+        z-index: 2
+        top: calc(50% - 20px)
+        right: 8px
+        &::after
+            position: absolute
+            z-index: 1
+            content: ''
+            right: 100%
+            top: 0
+            bottom: 0
+            display: block
+            width: 130px
+            background: linear-gradient(270deg, $n3 20%, rgba($n3, 0) 100%)
+            +dark
+                background: linear-gradient(270deg, $n8 20%, rgba($n8, 0) 100%)
+
+    input.input
+        padding: 0 80px 0 40px
+        background-color: $n3
+        color: $n5
+        +dark
+            background-color: $n8
+            border-color: rgba($n6, .3)

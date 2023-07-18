@@ -1,0 +1,170 @@
+@import ../../../styles/helpers
+
+.notification
+    position: relative
+    +m
+        position: inherit
+    &.active
+        .head
+            svg
+                fill: $n8
+                +dark
+                    fill: $n2
+        .body
+            visibility: visible
+            opacity: 1
+            transform: translateY(0)
+
+.head
+    position: relative
+    width: 40px
+    height: 40px
+    background: none
+    font-size: 0
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    svg
+        fill: $n8
+        transition: fill .2s
+        +dark
+            fill: $n5
+    &:hover
+        svg
+            fill: $n6
+            +dark
+                fill: $n2
+
+.counter
+    position: absolute
+    top: 4px
+    right: 4px
+    min-width: 16px
+    padding: 0 4px
+    background: $red
+    border-radius: 50%
+    font-size: 10px
+    line-height: 16px
+    font-weight: 700
+    color: $n2
+
+.body
+    position: absolute
+    z-index: 6
+    top: calc(100% + 12px)
+    left: -4px
+    width: 348px
+    padding: 20px 32px 12px
+    border-radius: 24px
+    border: 2px solid $n3
+    box-shadow: 0px 40px 64px -24px rgba(220, 215, 204, 0.45)
+    background: $n1
+    visibility: hidden
+    opacity: 0
+    transform: translateY(10px)
+    transition: all .3s
+    +dark
+        box-shadow: 0px 32px 64px -16px rgba(0, 0, 0, 0.25)
+        border: 1px solid $s4
+        background: $n9
+        color: $n2
+    +t
+        left: auto
+        right: 0
+    +m
+        left: 12px
+        width: calc(100% - 24px)
+
+.top
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+
+.title
+    margin-right: auto
+
+.close
+    width: 32px
+    height: 32px
+    margin-right: -20px
+    background: none
+    font-size: 0
+    svg
+        fill: $n6
+        transition: fill .2s
+        +dark
+            fill: $n5
+    &:hover
+        svg
+            fill: $n8
+            +dark
+                fill: $n4
+.list
+    margin: 0 -20px
+
+.item
+    position: relative
+    display: flex
+    align-items: center
+    margin-bottom: -1px
+    padding: 20px
+    border-radius: 12px
+    transition: background .2s
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 20px
+        right: 20px
+        height: 1px
+        background: $n4
+        transition: background .2s
+        +dark
+            background-color: transparent
+    &:hover
+        z-index: 1
+        background: $n3
+        +dark
+            background-color: $n7
+        &:before
+            background: $n3
+            +dark
+                background-color: transparent
+
+.avatar
+    flex-shrink: 0
+    width: 48px
+    height: 48px
+    img
+        border-radius: 50%
+
+.details
+    flex: 0 0 calc(100% - 48px)
+    width: calc(100% - 48px)
+    padding-left: 20px
+
+.line
+    display: flex
+    align-items: center
+    margin-bottom: 4px
+
+.subtitle
+    margin-right: auto
+    +base1
+    color: $n8
+    +dark
+        color: $n2
+
+.time
+    margin-left: 16px
+    +caption1
+    color: $n5
+
+.content
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    +caption1
+    color: $n5
+    span
+        color: $n8
+        +dark
+            color: $n2

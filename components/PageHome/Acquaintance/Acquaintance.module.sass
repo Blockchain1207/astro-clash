@@ -1,0 +1,88 @@
+@import ../../../styles/helpers
+
+.section
+    position: relative
+    min-height: 1024px
+    padding-top: 144px
+    overflow: hidden
+    background-color: $n3
+    +d
+        padding-top: 120px
+        min-height: 960px
+    +m
+        min-height: 810px
+    +dark
+        background-color: $n9
+
+.image
+    position: absolute
+    +trans
+    &:nth-child(1)
+        top: 23.4%
+        left: calc(50% - 556px)
+        animation: 3.5s infinite alternate planet_1
+        +d
+            height: 86px
+            width: 86px
+            left: calc(50% - 396px)
+        +t
+            height: 55px
+            width: 55px
+            top: 32.4%
+            left: calc(50% - 216px)
+    &:nth-child(2)
+        top: 41.2%
+        left: calc(50% - 256px)
+        +t
+            left: calc(50% - 96px)
+    &:nth-child(3)
+        top: 28.3%
+        right: calc(50% - 542px)
+        animation: 3.5s infinite alternate planet_2
+        +d
+            height: 130px
+            width: 130px
+            top: 16.3%
+            right: calc(50% - 446px)
+        +t
+            height: 92px
+            width: 92px
+            top: 26.3%
+            right: calc(50% - 216px)
+
+@keyframes planet_1
+    0%
+        transform: translateY(-20px) rotate(8deg)
+    100%
+        transform: translateY(10px) rotate(-8deg)
+
+@keyframes planet_2
+    0%
+        transform: translateY(-10px)
+    100%
+        transform: translateY(10px)
+
+.floor
+    position: absolute
+    left: 50%
+    bottom: -92px
+    transform: translateX(-50%)
+    +d
+        bottom: -62px
+    +m
+        bottom: -102px
+    path
+        stroke: $n4
+        +dark
+            stroke: $n7
+
+.slider
+    position: relative
+    z-index: 2
+
+.dots
+    bottom: -62px !important
+    +d
+        bottom: -58px !important
+    +m
+        bottom: -36px !important

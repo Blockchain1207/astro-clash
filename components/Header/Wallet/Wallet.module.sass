@@ -1,0 +1,164 @@
+@import ../../../styles/helpers
+
+.wallet
+    position: relative
+    &.wide
+        margin-bottom: 32px
+    &:not(.wide)
+        &.active
+            .head
+                border-color: $n5
+                .avatar
+                    border-color: $n5
+            .body
+                visibility: visible
+                opacity: 1
+                transform: translateY(0)
+.head
+    position: relative
+    display: flex
+    align-items: center
+    height: 40px
+    background: none
+    border-radius: 12px
+    border: 2px solid $n4
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    transition: border-color .2s
+    &.wide
+        margin-bottom: 12px
+        height: 48px
+        width: 100%
+        .code
+            padding: 0 16px
+        .avatar
+            height: 44px
+            width: 50px
+    .code
+        padding: 0 12px
+    +dark
+        border-color: $n7
+    &:not(.wide)
+        &:hover
+            border-color: $n5
+            .avatar
+                border-color: $n5
+
+.avatar
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 42px
+    height: 36px
+    border-right: 2px solid $n4
+    transition: border-color .2s
+    +dark
+        border-color: $n7
+
+.code
+    display: flex
+    align-items: center
+    +base2
+    color: $n6
+    &:before
+        content: ""
+        display: inline-block
+        width: 12px
+        height: 12px
+        margin-right: 8px
+        border-radius: 50%
+        background: $green
+    +dark
+        color: $n5
+
+.body
+    padding: 24px
+    border-radius: 16px
+    border: 2px solid $n3
+    background: $n1
+    &:not(.wide)
+        position: absolute
+        top: calc(100% + 12px)
+        right: 0
+        width: 323px
+        box-shadow: 0px 40px 64px -24px rgba(220, 215, 204, 0.45)
+        visibility: hidden
+        opacity: 0
+        transform: translateY(10px)
+        transition: all .3s
+        +dark
+            box-shadow: 0px 32px 64px -16px rgba(0, 0, 0, 0.25)
+    +dark
+        border-color: $s4
+        background-color: $n9
+
+.label
+    +caption2
+    color: $n5
+    +dark
+        opacity: .5
+
+.line
+    display: flex
+    align-items: center
+    margin-top: 4px
+
+.copy
+    margin-left: auto
+    background: none
+    font-size: 0
+    svg
+        fill: $n5
+        transition: fill .2s
+    &:hover
+        svg
+            fill: $n8
+            +dark
+                fill: $n2
+
+.disconnectButton
+    width: 100%
+    margin-top: 16px
+    +dark
+        color: $n1
+
+.link
+    margin-top: 8px
+    text-align: center
+    a
+        display: inline-flex
+        align-items: center
+        +base2
+        color: $red
+        transition: opacity .2s
+        svg
+            margin-left: 12px
+            fill: $red
+        &:hover
+            opacity: .8
+
+.foot
+    display: flex
+    align-items: center
+    margin-top: 20px
+    padding-top: 20px
+    border-top: 1px solid $s1
+    +dark
+        border-color: $n7
+
+.balance
+    display: flex
+    align-items: center
+    margin-right: auto
+    +dark
+        color: $n2
+        .label
+            opacity: 1
+
+.currency
+    flex-shrink: 0
+    width: 40px
+    height: 40px
+    margin-right: 16px
+    img
+        border-radius: 50%

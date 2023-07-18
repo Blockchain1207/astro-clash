@@ -1,0 +1,42 @@
+@import ../../../../styles/helpers
+
+.wrapper
+    position: relative
+    &.modal
+        .video
+            height: 512px
+            width: 512px
+        .orbit
+            bottom: -10px
+            left: 50%
+            transform: translateX(-50%)
+            max-width: 400px
+
+.video
+    height: 600px
+    width: 600px
+    +m
+        height: 512px
+        width: 512px
+
+.orbit
+    position: absolute
+    bottom: -12px
+    width: 100%
+    text-align: center
+    +m
+        bottom: -10px
+        left: 50%
+        transform: translateX(-50%)
+        max-width: 400px
+
+.control
+    position: absolute
+    left: calc(50% - 12px)
+    bottom: -3px
+    width: 24px
+    height: 24px
+    border-radius: 50%
+    background-color: $purple
+    svg
+        fill: $n1

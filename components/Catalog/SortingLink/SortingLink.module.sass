@@ -1,0 +1,42 @@
+@import ../../../styles/helpers
+
+.link
+    position: relative
+    display: flex
+    align-items: center
+    flex-shrink: 0
+    padding: 0 32px 34px
+    background: none
+    +base2S
+    color: $n6
+    transition: color .2s
+    +dark
+        color: $n5
+    &:before
+        content: ""
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        width: 0
+        height: 2px
+        margin: 0 auto
+        background: $purple
+        border-radius: 2px
+        transition: width .2s
+    &:hover
+        color: $n8
+        +dark
+            color: $n2
+    &.active
+        color: $n8
+        &:before
+            width: 100%
+        +dark
+            color: $n2
+
+.preview
+    display: flex
+    margin-right: 12px
+    border-radius: 50%
+    overflow: hidden

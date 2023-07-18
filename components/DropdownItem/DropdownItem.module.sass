@@ -1,0 +1,89 @@
+@import ../../styles/helpers
+
+.wrapper
+    cursor: pointer
+    position: relative
+    &.active
+        .head
+            border-color: $red
+        .body
+            visibility: visible
+            opacity: 1
+            transform: translateY(8px)
+.label
+    +base2
+    color: $n5
+    margin-bottom: 12px
+
+.head
+    border: 2px solid $n3
+    border-radius: 12px
+    +trans
+    .item
+        padding: 16px 28px 16px 16px
+    +dark
+        border-color: $n6
+
+.body
+    visibility: hidden
+    opacity: 0
+    position: absolute
+    background-color: $n3
+    border-radius: 12px
+    padding: 4px
+    width: 100%
+    z-index: 10
+    +trans
+    .item
+        padding: 12px 24px 12px 12px
+        +nl
+            margin-bottom: 4px
+        &:hover
+            background-color: $n4
+            +dark
+                background-color: $n8
+        &.selected
+            background-color: $n1
+            +dark
+                background-color: $n7
+    +dark
+        background-color: $n9
+
+.active
+    .chevron
+        transform: rotate(180deg)
+
+.item
+    display: flex
+    align-items: center
+    border-radius: 12px
+    &:not(.selected)
+        .select
+            display: none
+
+.icon
+    margin-left: auto
+    +trans
+    +dark
+        fill: $n5
+
+.chevron
+    fill: $n6
+
+.preview
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 48px
+    height: 48px
+    margin-right: 12px
+    border-radius: 50%
+    overflow: hidden
+
+.title
+    +base1
+
+.type
+    color: $n5
+    +caption2

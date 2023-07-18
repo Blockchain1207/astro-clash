@@ -1,0 +1,49 @@
+@import ../../../../styles/helpers
+
+.wrapper
+    display: flex
+    align-items: center
+    flex-direction: column
+    padding: 64px 32px
+    +t
+        padding: 64px 0px
+
+.preview
+    margin-bottom: 40px
+    border-radius: 50%
+    overflow: hidden
+    line-height: 0
+
+.title
+    margin-bottom: 4px
+
+.info
+    margin-bottom: 20px
+    +base1M
+    color: $n5
+
+.content
+    margin-bottom: 20px
+    text-align: center
+    color: $n5
+
+.networks
+    display: flex
+    align-items: center
+    justify-content: center
+
+.link
+    padding: 8px
+    line-height: 0
+    +nl
+        margin-right: 32px
+    svg
+        fill: $n6
+        +trans
+        +dark
+            fill: $n5
+    &:hover
+        svg
+            fill: $n8
+            +dark
+                fill: $n2

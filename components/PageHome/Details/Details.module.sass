@@ -1,0 +1,83 @@
+@import ../../../styles/helpers
+
+.section
+    overflow: hidden
+
+.places
+    margin-left: -56px
+    +d
+        margin-left: -40px
+
+.place
+    padding-left: 56px
+    +d
+        padding-left: 40px
+    &:not(:last-child)
+        margin-bottom: 40px
+        padding-bottom: 40px
+        border-bottom: 1px solid $n4
+        +dark
+            border-color: $n7
+
+.subtitle
+    margin-bottom: 12px
+
+.location
+    margin-bottom: 4px
+
+.planet
+    display: flex
+    align-items: center
+    margin-bottom: 24px
+
+    svg
+        margin-right: 8px
+        fill: $green
+
+.content
+    color: $n6
+    +dark
+        color: $n5
+
+.counter
+    margin-top: 88px
+    +d
+        display: none
+    span
+        font-size: 32px
+
+.avatars
+    display: flex
+    margin-top: 168px
+    +d
+        margin-top: 126px
+
+.avatar
+    border-radius: 50%
+    overflow: hidden
+    line-height: 0
+    &:not(:last-child)
+        margin-right: 12px
+
+.circles
+    > span
+        position: relative
+        &:after, &:before
+            content: ''
+            position: absolute
+            z-index: -1
+            left: 50%
+            transform: translateX(-50%)
+            border-radius: 100%
+            display: block
+            border: 0.34px solid rgb(243, 243, 242)
+            +dark
+                opacity: .040
+        &:after
+            bottom: 0
+            width: 100%
+            padding-bottom: 100%
+        &:before
+            bottom: 9.3%
+            width: 79%
+            padding-bottom: 79%

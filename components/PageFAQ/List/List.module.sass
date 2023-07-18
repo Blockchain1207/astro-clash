@@ -1,0 +1,48 @@
+@import ../../../styles/helpers
+
+.container
+    position: relative
+    z-index: 1
+
+.title
+    margin-bottom: 128px
+    text-align: center
+    +t
+        margin-bottom: 64px
+        +h2
+    +m
+        +h3
+
+.list
+    margin: 0 -16px 128px
+    column-count: 3
+    +t
+        margin: 0 -16px 80px
+        column-count: 2
+    +m
+        margin: 0 -16px 64px
+        column-count: 1
+
+.item
+    margin: 0 28px
+    border-top: 2px solid $n4
+    padding-top: 64px
+    break-inside: avoid-column
+    +nf
+        margin-top: 64px
+    +dark
+        border-color: $n7
+    +m
+        margin: 0 16px
+        padding-top: 40px
+
+.item_title
+    margin-bottom: 16px
+
+.content
+    color: $n6
+    +dark
+        color: $n5
+    p
+        +nl
+            margin-bottom: 24px

@@ -1,0 +1,52 @@
+@import ../../../../styles/helpers
+
+.preview
+    margin-bottom: 20px
+    border: 4px dashed $n4
+    border-radius: 16px
+    display: flex
+    align-items: center
+    justify-content: center
+    +dark
+        border-color: $n7
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+.add
+    width: 60px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $n4
+    border-radius: 50%
+    +dark
+        background-color: $n7
+        svg
+            fill: $n2
+
+.blocks
+    padding: 8px 11px 4px 0
+
+.item
+    width: 61px
+    height: 12px
+    border-radius: 4px
+    background-color: $n4
+    +dark
+        background-color: $n7
+
+.line
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +nf
+        margin-top: 16px
+        div
+            +nf
+                width: 41px
+            +nl
+                width: 122px
+                height: 16px

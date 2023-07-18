@@ -1,0 +1,89 @@
+@import ../../../styles/helpers
+
+.section
+    margin-bottom: 80px
+    +t
+        margin-bottom: 40px
+    +m
+        margin-bottom: 64px
+
+.item
+    position: relative
+    margin-top: 142px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: $n1
+    border-radius: 32px
+    padding: 80px 64px
+    +m
+        margin-top: 32px
+    +dark
+        background-color: $n7
+    +m
+        padding: 32px 20px
+        flex-direction: column
+
+.line
+    position: absolute
+    z-index: 3
+    left: calc(50% - 8px)
+    top: -150px
+    height: 16px
+    width: 16px
+    background-color: $n1
+    border-radius: 50%
+    border: 4px solid
+    +dark
+        background-color: $n9
+    +m
+        top: -40px
+    &::after, &::before
+        +m
+            display: none !important
+    &::after
+        position: absolute
+        left: -4px
+        top: 138px
+        height: inherit
+        width: inherit
+        content: ''
+        display: block
+        border: inherit
+        border-radius: inherit
+        background-color: inherit
+    &::before
+        position: absolute
+        left: 3.5px
+        top: 24px
+        height: 102px
+        width: 1px
+        content: ''
+        display: block
+        background-color: $n4
+        border-radius: 50%
+        +dark
+            background-color: $n7
+
+.details
+    max-width: 470px
+    +m
+        max-width: 100%
+
+.title
+    margin-bottom: 24px
+
+.content
+    +body2
+    white-space: pre-line
+    color: $n6
+    +dark
+        color: $n5
+    p
+        +nl
+            padding-bottom: 24px
+
+.preview
+    margin: -64px 0
+    +m
+        margin: 0

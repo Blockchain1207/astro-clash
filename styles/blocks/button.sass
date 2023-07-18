@@ -1,0 +1,99 @@
+*[class^="button"]
+    display: inline-flex
+    text-align: center
+    align-items: center
+    justify-content: center
+    height: 56px
+    padding: 0 30px
+    background: $red
+    border-radius: 12px
+    +base1
+    color: $n1
+    transition: background .2s, border-color .2s, color .2s
+    cursor: pointer
+    svg
+        flex-shrink: 0
+        fill: $n1
+        transition: fill .2s
+        &:nth-child(1)
+            margin-right: 12px
+        &:last-child
+            margin-left: 8px
+    &:hover
+        background-color: $lblue
+    &:disabled
+        background-color: $n4
+        color: $n5
+        pointer-events: none
+        svg
+            fill: $n5
+
+.button-stroke
+    border: 2px solid rgba($n5, .3)
+    background: none
+    color: $n8
+    svg
+        fill: $n8
+    +dark-common
+        color: $n2
+        svg
+            fill: $n2
+    &:hover
+        border-color: transparent
+        background-color: $n8
+        color: $n2
+        svg
+            fill: $n2
+        +dark-common
+            background-color: $n2
+            color: $n8
+            svg
+                fill: $n8
+    &:disabled
+        border-color: $n4
+        background-color: transparent
+
+.button-sm,
+.button-md
+    padding: 0 14px
+    border-radius: 8px
+    font-size: 14px
+
+.button-sm
+    height: 40px
+    svg
+        &:nth-child(1)
+            margin: 0 8px 0 0
+
+.button-md
+    height: 48px
+
+.button-square-stroke
+    flex: 0 0 48px
+    width: 48px
+    height: 48px
+    padding: 0
+    background: none
+    border: 2px solid $n4
+    transition: all .2s
+    svg
+        fill: $n6
+        &:nth-child(1),
+        &:last-child
+            margin: 0
+    +dark-common
+        border-color: $n7
+        svg
+            fill: $n5
+    &:hover
+        background: none
+        border-color: $n6
+        svg
+            fill: $n8
+            +dark-common
+                fill: $n2
+
+.button-square-stroke.button-small
+    flex: 0 0 40px
+    width: 40px
+    height: 40px

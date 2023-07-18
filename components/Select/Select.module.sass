@@ -1,0 +1,48 @@
+@import ../../styles/helpers
+
+.select
+    position: relative
+    z-index: 20
+
+.toggle
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    height: 40px
+    padding: 0 14px
+    border: 2px solid $n3
+    border-radius: 8px
+    +base2
+    transition: border-color .2s
+    &:hover
+        border-color: $shade1
+    &.active
+        border-color: rgba($purple,.75)
+        svg
+            transform: scale(1, -1)
+    svg
+        margin-left: 16px
+
+.dropdown
+    position: absolute
+    top: calc(100% + 6px)
+    left: 0
+    width: 100%
+    padding: 8px
+    background: $n0
+    border-radius: 12px
+
+.option
+    width: 100%
+    height: 40px
+    padding: 0 8px
+    border-radius: 6px
+    +base2
+    text-align: left
+    transition: background .2s, color .2s
+    &:hover
+        background: $n2
+    &.active
+        background: none
+        color: $purple

@@ -1,0 +1,61 @@
+@import ../../../styles/helpers
+
+.section
+    position: relative
+    overflow: hidden
+
+.container
+    display: flex
+    align-items: center
+    +d
+        min-height: 768px
+    +m
+        display: block
+        margin: 64px auto
+        min-height: auto
+
+.wrap
+    max-width: 420px
+    margin-right: auto
+    +t
+        margin-bottom: 64px
+
+.title
+    margin-bottom: 32px
+    +m
+        +h4
+
+.list
+    li
+        position: relative
+        padding-left: 36px
+        +body2
+        color: $n6
+        &:before
+            content: ''
+            position: absolute
+            top: 1px
+            left: 0
+            width: 24px
+            height: 24px
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.444L9.26 17 19 7' stroke='%2330b38c' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat 50% 50% / 100% auto
+        &:not(:last-child)
+            margin-bottom: 20px
+        +dark
+            color: $n5
+
+.preview
+    position: absolute
+    top: 50%
+    right: calc(50% - 585px)
+    transform: translateY(-55%)
+    +d
+        width: 645px
+        height: 493px
+    +m
+        position: relative
+        top: auto
+        right: auto
+        transform: translateY(0)
+        width: 100%
+        height: auto

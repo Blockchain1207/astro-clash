@@ -1,0 +1,48 @@
+@import ../../../styles/helpers
+
+.body
+    text-align: center
+
+.alert
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 128px
+    width: 128px
+    background-color: rgba($purple, .25)
+    border-radius: 50%
+    margin: 0 auto 32px
+    svg
+        fill: $purple
+
+.title
+    margin-bottom: 12px
+
+.note
+    +base1M
+    color: $n5
+    margin-bottom: 32px
+
+.buttons
+    display: flex
+    justify-content: center
+
+.button
+    margin: 0 6px
+    width: 170px
+    margin-bottom: 40px
+    .browser
+        display: inherit
+        flex-shrink: 0
+        margin-right: 12px
+    &:hover
+        background-color: transparent
+        border-color: $n8
+        color: $n8
+        +dark
+            border-color: transparent
+
+.footer
+    a
+        +base1
+        color: $red

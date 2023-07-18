@@ -1,0 +1,132 @@
+=archivo
+    font-family: "Archivo", sans-serif
+
+=inter
+    font-family: "Inter", sans-serif
+
+=body1
+    font-size: 24px
+    line-height: 36px
+    letter-spacing: -0.02em
+
+=body2
+    font-size: 18px
+    font-weight: 500
+    line-height: 28px
+    letter-spacing: -0.02em
+
+=base1
+    font-size: 16px
+    font-weight: 700
+    line-height: 24px
+
+=base1M
+    font-size: 16px
+    font-weight: 500
+    line-height: 24px
+
+=base2
+    font-size: 14px
+    font-weight: 700
+    line-height: 24px
+
+=base2S
+    font-size: 14px
+    font-weight: 600
+    line-height: 24px
+
+=title
+    font-size: 20px
+    font-weight: 700
+    line-height: 28px
+
+=caption1
+    font-size: 13px
+    font-weight: 500
+    line-height: 20px
+    letter-spacing: -0.01em
+
+=caption2
+    font-size: 12px
+    font-weight: 600
+    line-height: 16px
+    letter-spacing: -0.02em
+
+=h1
+    +archivo
+    font-size: 64px
+    line-height: 72px
+    letter-spacing: -0.03em
+
+=h2
+    +archivo
+    font-size: 48px
+    line-height: 56px
+    letter-spacing: -0.02em
+
+=h3
+    +archivo
+    font-weight: 700
+    font-size: 40px
+    line-height: 48px
+    letter-spacing: -0.02em
+
+=h4
+    +archivo
+    font-size: 36px
+    line-height: 44px
+    letter-spacing: -0.02em
+
+=h5
+    +archivo
+    font-size: 32px
+    line-height: 40px
+    letter-spacing: -0.02em
+
+=h6
+    +archivo
+    font-weight: 700
+    font-size: 24px
+    line-height: 32px
+    letter-spacing: -0.02em
+
+=title
+    +archivo
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: -0.01em
+
+=trans($what: all, $dur: .15s, $easing: ease)
+    transition: $what $dur $easing
+
+=nl
+    &:not(:last-child)
+        @content
+
+=nf
+    &:not(:first-child)
+        @content
+
+// theme
+=dark
+    @at-root :global(.dark-mode) &
+        @content
+
+=dark-body
+    @at-root .dark-mode
+        @content
+
+=dark-common
+    @at-root .dark-mode &
+        @content
+
+=blend($mode)
+    &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        mix-blend-mode: $mode
+        @content

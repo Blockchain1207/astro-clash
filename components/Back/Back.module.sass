@@ -1,0 +1,22 @@
+@import ../../styles/helpers
+
+.back
+    width: 40px
+
+.button
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background: $n8
+    svg
+        fill: $n1
+    &:not(.dark)
+        +dark
+            background: $n2
+            svg
+                fill: $n8

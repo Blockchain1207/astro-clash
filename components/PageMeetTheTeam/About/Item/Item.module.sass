@@ -1,0 +1,55 @@
+@import ../../../../styles/helpers
+
+.wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +t
+        flex-direction: column !important
+        align-items: center
+    &:nth-child(2n)
+        flex-direction: row-reverse
+
+.title
+    margin-bottom: 32px
+    +m
+        margin-bottom: 24px
+        +h3
+
+.details
+    max-width: 454px
+    +t
+        margin: 0 !important
+        max-width: 100%
+    &:nth-child(odd)
+        margin-right: 32px
+    &:nth-child(even)
+        margin-left: 32px
+
+.content
+    margin-bottom: 40px
+    color: $n6
+    +dark
+        color: $n5
+
+.item
+    margin-bottom: 16px
+    display: flex
+    align-items: center
+    +nl
+        border-bottom: 1px solid $n4
+        padding-bottom: 16px
+        +dark
+            border-color: $n7
+
+.icon
+    margin-right: 12px
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 24px
+    width: 24px
+    border-radius: 50%
+    background: rgba($green, .2)
+    svg
+        fill: $green

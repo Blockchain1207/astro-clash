@@ -1,0 +1,23 @@
+@import ../../../styles/helpers
+
+.list
+    margin: -40px -17px 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: stretch
+    +t
+        margin: -40px -8px 0
+    +m
+        margin: -40px 0 0
+
+.card
+    flex-grow: 0
+    flex-shrink: 0
+    margin: 40px 17px 0
+    width: calc(33.333% - 34px)
+    +t
+        margin: 40px 8px 0
+        width: calc(50% - 16px)
+    +m
+        margin: 40px 0 0
+        width: 100%

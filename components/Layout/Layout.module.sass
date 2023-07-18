@@ -1,0 +1,13 @@
+@import ../../styles/helpers
+
+.layout
+    display: flex
+    min-height: 100vh
+    flex-direction: column
+    &.gray
+        background-color: $n3
+        +dark
+            background-color: $n8
+
+.inner
+    flex-grow: 1

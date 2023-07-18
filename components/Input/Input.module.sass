@@ -1,0 +1,57 @@
+@import ../../styles/helpers
+
+.input
+    height: 64px
+    width: 100%
+    border-radius: 12px
+    border: 2px solid $n4
+    padding: 0 12px
+    background-color: $n2
+    color: $n8
+    +inter
+    +base1M
+    +trans
+    +dark
+        border-color: rgba($n6, .15)
+        color: $n2
+        background-color: rgba($n7, .5)
+    &.small
+        border-width: 1px
+        height: 56px
+    &:hover
+        border-color: rgba($n5, .5)
+        background-color: $n1
+        +dark
+            border-color: rgba($n5, .5)
+            background-color: $n7
+    &:focus
+        border: 2px solid rgba(24, 99, 249, 0.5)
+        background-color: $n1
+        +dark
+            border: 2px solid rgba(24, 99, 249, 0.5)
+            background-color: $n7
+    &:disabled
+        color: $n6
+        opacity: 1
+    &::placeholder
+        +dark
+            color: $n5
+    &.arobase
+        padding-left: 44px
+
+.notice
+    margin-top: 12px
+    +caption2
+
+.error
+    color: $red
+
+.success
+    color: $green
+
+.arobase_icon
+    position: absolute
+    left: 20px
+    top: 30px
+    line-height: 0
+    color: $green

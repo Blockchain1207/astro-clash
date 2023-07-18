@@ -1,0 +1,67 @@
+@import ../../styles/helpers
+
+.main
+    position: relative
+    margin-bottom: 64px
+    padding: 208px 0 125px
+    background-color: $n3
+    overflow: hidden
+    +d
+        padding: 160px 0 64px
+    +m
+        margin-bottom: 32px
+        padding: 104px 0 18px
+    +dark
+        background-color: $n9
+
+.wrap
+    max-width: 482px
+    margin-bottom: 193px
+    +d
+        max-width: 430px
+        margin-bottom: 112px
+    +m
+        margin-bottom: 20px
+
+.title
+    margin-bottom: 20px
+    span
+        color: $purple
+    +d
+        +h2
+    +m
+        +h3
+
+.info
+    margin-bottom: 40px
+    color: $n5
+
+.preview
+    position: absolute
+    top: 109px
+    right: calc(50% - 845px)
+    +d
+        right: calc(50% - 675px)
+        max-width: 710px
+    +t
+        top: 150px
+        right: calc(50% - 545px)
+        max-width: 540px
+    +m
+        position: relative
+        top: auto
+        right: auto
+        max-width: 100%
+        margin-bottom: 20px
+
+.list
+    display: flex
+    margin: 0 -68px
+    +d
+        margin: 0 -44px
+    +m
+        flex-direction: column
+        margin: 0 -16px
+
+.item
+    flex: 0 0 33.333%

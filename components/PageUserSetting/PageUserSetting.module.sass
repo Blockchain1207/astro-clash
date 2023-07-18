@@ -1,0 +1,139 @@
+@import ../../styles/helpers
+
+.section
+    padding-top: 88px
+    margin-bottom: 0
+    +t
+        padding-top: 80px
+    +m
+        padding-top: 72px
+
+.container
+    margin: 80px auto
+    +m
+        margin: 32px auto
+
+.head
+    margin-bottom: 64px
+    border-bottom: 1px solid $n4
+    padding-bottom: 64px
+    +m
+        margin-bottom: 32px
+        padding-bottom: 32px
+    +dark
+        border-color: $n7
+
+.title
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +m
+        +h4
+
+.info
+    color: $n5
+
+.body
+    display: flex
+    justify-content: space-between
+    +m
+        flex-direction: column-reverse
+
+.side
+    max-width: 640px
+    width: 100%
+
+.avatar
+    margin-left: 48px
+    max-width: 256px
+    padding-top: 36px
+    +m
+        margin-left: 0
+        max-width: 334px
+        padding-top: 0
+        display: flex
+
+.preview
+    width: 128px
+    height: 128px
+    margin-bottom: 20px
+    border-radius: 50%
+    overflow: hidden
+    line-height: 0
+    flex-shrink: 0
+    +m
+        margin: 0 20px 32px 0
+
+.note
+    margin-bottom: 20px
+    +caption1
+    color: $n5
+
+.change_avatar
+    position: relative
+
+input.wallet_input
+    padding-left: 44px
+    padding-right: 50px
+    color: $n6
+    +base2
+    pointer-events: none
+
+.wallet_status
+    position: absolute
+    left: 24px
+    top: 26px
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    background-color: $green
+
+.wallet_icon
+    position: absolute
+    right: 20px
+    top: 20px
+
+.links
+    display: flex
+    +m
+        flex-direction: column
+
+.save
+    +m
+        display: none
+
+.button_link
+    position: relative
+    +nf
+        margin-left: 24px
+        +m
+            margin-top: 32px
+            margin-left: 0
+    &.connected
+        border-color: $green
+        background-color: rgba($green, .15) !important
+        &:hover
+            color: inherit !important
+            > svg
+                fill: $n8
+                +dark
+                    fill: $n2
+
+.disconnect
+    position: absolute
+    right: -16px
+    top: -16px
+    height: 32px
+    width: 32px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    background-color: $n8
+    +dark
+        background-color: $n2
+    svg.close
+        margin: 0
+        fill: $n1
+        +dark
+            fill: $n8

@@ -1,0 +1,53 @@
+@import ../../styles/helpers
+
+.footer
+    padding: 60px 0 20px
+    +t
+        padding: 0 0 20px
+
+.body
+    display: flex
+    align-items: center
+    +t
+        align-items: flex-start
+
+.menu
+    display: flex
+    margin-right: auto
+    .link
+        +base2S
+        +nl
+            margin-right: 40px
+    +t
+        flex-direction: column
+        .link
+            +nl
+                margin-bottom: 16px
+
+.link
+    color: $n5
+    transition: color .2s
+    &:hover
+        color: $n8
+        +dark
+            color: $n2
+
+.foot
+    display: flex
+    align-items: center
+    margin-top: 40px
+    padding-top: 20px
+    border-top: 1px solid $n4
+    +caption2
+    color: $n5
+    +dark
+        border-color: $n7
+
+.list
+    margin-left: auto
+    +caption2
+    .link
+        +nl
+            margin-right: 32px
+            +m
+                margin-right: 16px

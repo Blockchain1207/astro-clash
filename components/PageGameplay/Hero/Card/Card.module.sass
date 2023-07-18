@@ -1,0 +1,36 @@
+@import ../../../../styles/helpers
+
+.card
+    flex-shrink: 0
+    width: 280px
+    background-color: $n2
+    color: $n8
+    border: 1px solid transparent
+    +trans
+    +d
+        width: 248px
+    +dark
+        background-color: $n8
+    &:hover
+        background-color: #ECECE2
+        +dark
+            background-color: $n8
+            border: 1px solid $n7
+
+.preview
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+    max-width: 280px
+    width: 100%
+    height: 320px
+    +d
+        max-width: 248px
+        height: 288px
+
+.body
+    padding: 20px 24px 24px
+    +dark
+        color: $n2

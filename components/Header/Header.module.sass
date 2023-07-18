@@ -1,0 +1,170 @@
+@import ../../styles/helpers
+
+.header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 10
+    transition: background .2s, box-shadow .2s
+    .container
+        display: flex
+        align-items: center
+        height: 88px
+        +d
+            height: 80px
+        +m
+            height: 72px
+    &.visible, &.active
+        background-color: $n2
+        box-shadow: 0px 1px 0px #E6EBF0
+        +dark
+            background-color: $n8
+            box-shadow: 0px 1px 0px $n7
+
+.burger
+    position: relative
+    z-index: 3
+    flex: 0 0 32px
+    width: 32px
+    height: 32px
+    background: none
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        top: 15px
+        left: 3px
+        width: 26px
+        height: 2px
+        background: $n8
+        border-radius: 2px
+        transition: transform .2s
+        +dark
+            background: $n1
+    &:before
+        transform: translateY(4px)
+    &:after
+        transform: translateY(-4px)
+
+.menu
+    position: relative
+    margin-right: auto
+    font-size: 0
+    &.active
+        .burger
+            &:before
+                transform: translateY(0) rotate(-45deg)
+            &:after
+                transform: translateY(0) rotate(45deg)
+    +t-up
+        &:hover, &.active
+            .burger
+                &:before
+                    transform: translateY(0) rotate(-45deg)
+                &:after
+                    transform: translateY(0) rotate(45deg)
+            .nav
+                visibility: visible
+                opacity: 1
+    +t-up
+        +d
+            &:hover, &.active
+                &.menu ~ .logo
+                    visibility: hidden
+                    opacity: 0
+
+    .nav
+        position: absolute
+        top: 55%
+        left: 100%
+        display: flex
+        transform: translateY(-50%)
+        padding-left: 12px
+        visibility: hidden
+        opacity: 0
+        transition: visibility .2s, opacity .2s
+
+.mobile_menu
+    position: fixed
+    z-index: 5
+    top: 80px
+    left: 0
+    right: 0
+    bottom: 0
+    visibility: hidden
+    opacity: 0
+    overflow: auto
+    padding: 32px 24px
+    background-color: $n1
+    transition: visibility .2s, opacity .2s
+    +dark
+        background-color: $n8
+    &.active
+        visibility: visible
+        opacity: 1
+    .nav
+        .link
+            margin-bottom: 12px
+            display: block
+            padding: 12px
+    +m
+        top: 72px
+        padding: 18px
+
+.link
+    padding: 4px 12px
+    border-radius: 8px
+    white-space: nowrap
+    +base2S
+    color: $n5
+    transition: background .2s, color .2s
+    &:hover
+        color: $n8
+        +dark
+            color: $n1
+    &.active
+        background: $n8
+        color: $n2
+        +dark
+            background: $n2
+            color: $n8
+    +nl
+        margin-right: 12px
+        +m
+            margin-right: 0
+
+.logo
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    transition: visibility .2s, opacity .2s
+    +d
+        width: 114px
+        height: 42px
+
+.button
+    margin-left: auto
+    svg.icon_game
+        display: none
+        margin: 0
+    +t
+        height: 40px
+        width: 40px
+        border-radius: 50%
+        font-size: 0
+        svg.icon_game
+            display: block
+
+.control
+    display: flex
+    align-items: center
+    margin-left: auto
+    transition: visibility .2s, opacity .2s
+
+.wallet
+    margin-left: 16px
+
+.settings
+    margin-left: 16px

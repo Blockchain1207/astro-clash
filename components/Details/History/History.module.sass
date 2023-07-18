@@ -1,0 +1,59 @@
+@import ../../../styles/helpers
+
+.item
+    display: flex
+    align-items: center
+    &:not(:last-child)
+        margin-bottom: 24px
+        padding-bottom: 24px
+        border-bottom: 1px solid $n4
+        +dark
+            border-color: $n7
+
+.avatar
+    flex-shrink: 0
+    width: 48px
+    height: 48px
+    margin-right: 12px
+    border-radius: 50%
+    overflow: hidden
+
+.details
+    display: flex
+    align-items: flex-start
+    flex-grow: 1
+
+.box
+    margin-right: auto
+
+.author
+    margin-bottom: 4px
+    +base1
+    span
+        color: $n5
+
+.date
+    +caption2
+    color: $n5
+
+.line
+    display: flex
+    align-items: center
+    flex-shrink: 0
+    margin: -2px 0 0 16px
+
+.price
+    margin-right: 12px
+
+.link
+    width: 20px
+    height: 20px
+    font-size: 0
+    svg
+        fill: $n5
+        transition: fill .2s
+    &:hover
+        svg
+            fill: $n8
+            +dark
+                fill: $n2

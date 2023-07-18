@@ -1,0 +1,151 @@
+@import ../../../styles/helpers
+
+.settings
+    position: relative
+    height: 40px
+    +t
+        position: inherit
+    &.active
+        .body
+            visibility: visible
+            opacity: 1
+            transform: translateY(0)
+
+.head
+    position: relative
+    width: 40px
+    height: 40px
+    background: none
+    font-size: 0
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+.body
+    position: absolute
+    z-index: 6
+    top: calc(100% + 12px)
+    right: -16px
+    width: 294px
+    padding: 0
+    border-radius: 16px
+    border: 2px solid $n3
+    box-shadow: 0px 40px 64px -24px rgba(220, 215, 204, 0.45)
+    background: $n1
+    visibility: hidden
+    opacity: 0
+    transform: translateY(10px)
+    transition: visibility .3s, opacity .3s, transform .3s
+    +dark
+        box-shadow: 0px 32px 64px -16px rgba(0, 0, 0, 0.25)
+        border-color: $s4
+        background-color: $n9
+    +t
+        right: 12px
+    +m
+        left: 12px
+        width: calc(100% - 24px)
+
+.top
+    display: flex
+    margin-bottom: 12px
+    padding: 22px 22px 12px
+    border-bottom: 1px solid $s1
+    color: $n8
+    transition: color .2s
+    +dark
+        border-color: $s4
+        color: $n2
+    &:hover
+        color: $purple
+    .arrow
+        margin-top: 2px
+        margin-left: auto
+        +dark
+            svg
+                fill: $n2
+
+.details
+    margin-right: 16px
+
+.login
+    +caption1
+    color: $n5
+
+.link
+    display: flex
+    align-items: center
+    height: 48px
+    margin: 0 10px
+    padding: 0 12px
+    border-radius: 8px
+    +base2
+    color: $n5
+    transition: box-shadow .2s, background .2s, color .2s
+    .arrow
+        margin-left: auto
+        opacity: 0
+        transition: opacity .2s
+        +dark
+            svg
+                fill: $n2
+    &:hover
+        color: $n8
+        +dark
+            color: $n2
+        .icon
+            svg
+                fill: $n8
+                +dark
+                    fill: $n2
+        .arrow
+            opacity: 1
+    &.active
+        background: $s1
+        box-shadow: 0px 2px 2px #E2E2DF, inset 0px 2px 1px #FFFFFF
+        color: $n8
+        position: relative
+        +dark
+            box-shadow: inset 0px 2px 1px #3A3E4A
+            background-color: $n7
+            color: $n2
+            +blend(multiply)
+                box-shadow: 0px 2px 2px rgba(80, 84, 99, 0.44)
+                border-radius: 8px
+        .icon
+            svg
+                fill: $n8
+                +dark
+                    fill: $n2
+        .arrow
+            opacity: 1
+    &.divider
+        position: relative
+        margin-bottom: 25px
+        &:after
+            content: ""
+            position: absolute
+            top: calc(100% + 12px)
+            left: -12px
+            right: -12px
+            height: 1px
+            background: $s1
+            pointer-events: none
+            +dark
+                background-color: $s4
+
+.icon,
+.arrow
+    font-size: 0
+    svg
+        vertical-align: middle
+
+.icon
+    margin-right: 12px
+    svg
+        fill: $n5
+        transition: fill .2s
+
+.control
+    padding: 0 22px 22px
+    .button
+        width: 100%
+        margin-top: 12px

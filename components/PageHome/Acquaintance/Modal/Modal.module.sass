@@ -1,0 +1,107 @@
+@import ../../../../styles/helpers
+
+.container
+    position: fixed
+    z-index: 6
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    opacity: 0
+    visibility: hidden
+    overflow: auto
+    padding-top: 104px
+    background-color: $n3
+    +trans(opacity, .25s, ease-out)
+    +t
+        padding-bottom: 136px
+    &.loaded
+        visibility: visible
+        opacity: 1
+    +dark
+        background-color: $n9
+
+.wrapper
+    position: relative
+    display: flex
+    justify-content: space-between
+    +t
+        flex-direction: column
+
+.next
+    +t
+        position: absolute
+        bottom: -88px
+        left: 50%
+        transform: translate(-50%)
+
+.description
+    margin: 120px 176px 0 80px
+    max-width: 384px
+    align-items: flex-start
+    +d
+        margin: 64px auto 0 24px
+    +t
+        margin: 0
+        max-width: 100%
+
+.details
+    text-align: left
+
+.text
+    margin: 92px 0 106px
+    color: $n6
+    p
+        +nl
+            padding-bottom: 24px
+    +d
+        margin: 56px 0 66px
+    +t
+        margin: 40px 0 48px
+    +dark
+        color: $n5
+
+.char_container
+    position: relative
+    margin-left: 24px
+    width: 100%
+    max-width: 680px
+    height: 880px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 24px
+    background-color: #EBEBE0
+    +d
+        width: 100%
+        max-width: 476px
+        height: 634px
+    +t
+        margin-left: 0
+        max-width: 100%
+    +dark
+        background-color: $n8
+
+.character
+    position: relative
+    z-index: 4
+
+.floor
+    z-index: 2
+    position: absolute
+    bottom: -128px
+    opacity: 0
+    +dark
+        opacity: .1
+        path
+            stroke: $n4
+
+.close
+    position: absolute !important
+    z-index: 4
+    top: 24px
+    right: 64px
+    +t
+        top: -8px
+        right: 16px

@@ -1,0 +1,54 @@
+@import ../../styles/helpers
+
+.wrapper
+    display: flex
+    align-items: center
+
+.checkbox
+    position: relative
+    cursor: pointer
+    display: inline-flex
+    align-items: center
+
+.input
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+    &:checked + .tick
+        background-color: $red
+        border-color: transparent
+        svg
+            opacity: 1
+
+.tick
+    width: 24px
+    height: 24px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+    border-radius: 6px
+    border: 2px solid $n4
+    background-color: $n1
+    +trans
+    +dark
+        border-color: $n7
+        background-color: $n9
+    svg
+        opacity: 0
+        fill: $n1
+        +trans
+    &.large
+        width: 40px
+        height: 40px
+        border-radius: 12px
+
+.label
+    margin-left: 12px
+    color: $n5
+    +base2
+
+.tooltip
+    margin-left: 12px

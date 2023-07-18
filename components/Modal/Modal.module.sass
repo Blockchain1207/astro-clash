@@ -1,0 +1,72 @@
+@import ../../styles/helpers
+
+.overlay
+    display: flex
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    padding: 16px
+    background-color: rgba($n3, .95)
+    overflow: auto
+    z-index: 990
+    opacity: 0
+    visibility: hidden
+    +trans(all, .25s, ease)
+    +dark
+        background-color: rgba($n8, .97)
+    &.visible
+        opacity: 1
+        visibility: visible
+    &.blink
+        .modal
+            opacity: 0
+    &.blink_done
+        .modal
+            +trans(opacity, .25s, ease-out)
+            opacity: 1
+.modal
+    position: relative
+    width: 100%
+    margin: auto
+    background-color: $n1
+    box-shadow: 0px 40px 64px -24px rgba(220, 215, 204, 0.45)
+    +dark
+        box-shadow: 0px 40px 64px -24px rgba(0,0,0, 0.45)
+        border: 1px solid $s4
+        background-color: $n9
+    &.small
+        max-width: 400px
+        border-radius: 24px
+        padding: 20px
+        .close
+            top: 20px
+            right: 20px
+    &.medium
+        max-width: 424px
+        border-radius: 24px
+        padding: 16px
+        .close
+            top: 32px
+            right: 32px
+    &.large
+        max-width: 496px
+    &.xlarge
+        max-width: 528px
+    &.large, &.xlarge
+        border-radius: 32px
+        padding: 40px
+        .close
+            top: 40px
+            right: 40px
+
+.close
+    position: absolute
+    width: 32px
+    height: 32px
+    padding: 6px
+    background-color: transparent
+    +dark
+        svg
+            fill: $n5

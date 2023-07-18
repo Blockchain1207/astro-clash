@@ -1,0 +1,37 @@
+@import ../../../styles/helpers
+
+.preview
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 896px
+    border-radius: 24px
+    +d
+        height: 640px
+    +s
+        height: 460px
+    .back,
+    .share
+        position: absolute
+
+.back,
+.share
+    top: 16px
+
+.back
+    left: 16px
+
+.share
+    right: 16px
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background: $n2
+    font-size: 0
+    svg
+        fill: $n6
+        transition: fill .2s
+    &:hover
+        svg
+            fill: $n8

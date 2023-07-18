@@ -1,0 +1,87 @@
+@import ../../styles/helpers
+
+.title
+    margin-bottom: 16px
+    padding: 18px 16px
+
+.form
+    margin-bottom: 16px
+
+.collections
+    margin-bottom: 16px
+
+.item
+    display: flex
+    align-items: center
+    border-radius: 12px
+    padding: 16px 32px 16px 16px
+    +trans
+    cursor: pointer
+    &:hover
+        background-color: $n3
+        +dark
+            background-color: $n7
+        .select
+            opacity: 1
+
+    &.selected
+        box-shadow: 0 0 0 2px $green inset
+        background-color: rgba($green, .15) !important
+        .select
+            opacity: 1
+            background-color: $green !important
+            svg:last-child
+                display: block
+            svg:first-child
+                display: none
+    .select
+        margin-left: auto
+        opacity: 0
+        +trans
+        +dark
+            background-color: $n8
+        svg:first-child
+            +dark
+                fill: $n4
+        svg:last-child
+            display: none
+            fill: $n1
+
+.preview
+    margin-right: 20px
+    border-radius: 12px
+    height: 64px
+    width: 64px
+
+.quantity
+    color: $n5
+    +base2S
+
+.select
+    height: 40px
+    width: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    background-color: $n4
+    +trans
+    +dark
+        background-color: $n5
+        svg
+            fill: $n2
+
+.append
+    margin-bottom: 16px
+    height: 88px
+    width: 100%
+    border: 2px dashed $n4
+    border-radius: 12px
+    display: flex
+    align-items: center
+    justify-content: center
+    +dark
+        border-color: $n7
+
+.wishlist
+    width: 100%

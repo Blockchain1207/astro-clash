@@ -1,0 +1,28 @@
+@import ../../styles/helpers
+
+.button
+    position: relative
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    font-size: 0
+    svg
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        transition: all .2s
+        &:nth-child(2)
+            z-index: 2
+            opacity: 0
+    &:hover
+        svg
+            fill: $red
+    &.active
+        svg
+            fill: $red
+            &:first-child
+                opacity: 0
+            &:nth-child(2)
+                opacity: 1
+

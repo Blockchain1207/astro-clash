@@ -1,0 +1,61 @@
+@import ../../../styles/helpers
+
+.title
+    margin-bottom: 18px
+    +t
+        margin-bottom: 12px
+        +h3
+
+.note, .list
+    margin-bottom: 40px
+
+.button
+    width: 100%
+    justify-content: start
+    padding: 0 16px
+    height: 64px
+    +dark
+        border-color: $n6
+    &:hover
+        background-color: $red
+        color: $n1
+        border-color: transparent
+        +dark
+            background-color: $red
+            color: $n1
+    +nl
+        margin-bottom: 12px
+    &[disabled]
+        opacity: .23
+        pointer-events: none
+        cursor: default
+
+    &.loading
+        border-color: transparent
+        color: $n1
+        background-color: $n8
+        +dark
+            color: $n8
+            background-color: $n2
+        &:hover
+            svg
+                fill: $green
+                +dark
+                    fill: $green
+        svg
+            margin: 0 16px 0 0
+            +dark
+                fill: $green
+    .icon
+        margin-right: 16px
+        display: inherit
+
+.footer
+    display: flex
+    justify-content: space-between
+    a
+        +base1
+        color: $red
+.more
+    button
+        margin-top: 0

@@ -1,0 +1,46 @@
+@import ../../../styles/helpers
+
+.description
+    display: flex
+    align-items: flex-end
+
+.details
+    margin-right: auto
+    &.small
+        display: flex
+        flex-direction: column-reverse
+
+.title
+    +t
+        +h4
+
+.line
+    display: flex
+    align-items: center
+
+.labels
+    display: flex
+    align-items: center
+
+.status
+    margin-left: 8px
+    padding: 3px 12px
+
+.code
+    display: inline-block
+    padding: 3px 6px
+    border-radius: 6px
+    background: rgba($green, .25)
+    +base2
+
+.prices
+    margin-left: 20px
+    text-align: right
+
+.crypto
+    color: $green
+    +m
+        +h6
+
+.price
+    color: $n5

@@ -1,0 +1,54 @@
+@import ../../../../styles/helpers
+
+.wrapper
+    width: 100%
+    margin: 0 16px
+    +m
+        width: calc(100% - 32px)
+
+.label
+    +base2
+    color: $n5
+    margin-bottom: 12px
+
+.group
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -6px
+
+.item
+    flex-grow: 1
+    margin: 0 6px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    cursor: pointer
+    padding: 24px 0
+    border-radius: 12px
+    border: 2px solid transparent
+    +trans
+    &.active
+        background: rgba($green, .15)
+        border: 2px solid $green
+    +m
+        flex-grow: 0
+        width: calc(33.33% - 12px)
+
+.preview
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    overflow: hidden
+    background-color: $lgreen
+    margin-bottom: 4px
+
+.title
+    +base2
+    color: $n8
+    +dark
+        color: $n2

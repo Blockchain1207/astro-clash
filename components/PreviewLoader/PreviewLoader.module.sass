@@ -1,0 +1,54 @@
+@import ../../styles/helpers
+
+.wrapper
+    position: relative
+    height: 128px
+    width: 128px
+    &.min
+        height: 102px
+        width: 102px
+        .loader
+            svg
+                height: 102px
+                width: 102px
+        .preview
+            width: 88px
+            height: 88px
+
+.loader
+    position: absolute
+    +trans(all, 2s, ease)
+    animation-play-state: stop
+    line-height: 0
+    &:not(.loaded)
+        animation: rotate 2s cubic-bezier(0.25, 0.1, 0.25, .9) infinite
+    svg
+        height: 128px
+        width: 128px
+
+.preview
+    position: absolute
+    left: calc(50%)
+    top: calc(50%)
+    transform: translate(-50%, -50%)
+    height: 104px
+    width: 104px
+    border-radius: 50%
+    overflow: hidden
+
+@keyframes rotate
+    100%
+        transform: rotate(360deg)
+
+.circle
+    +trans(all, 1s, ease)
+    fill: transparent
+    stroke-width: 5
+    stroke-linecap: round
+    stroke-dasharray: 380
+    stroke-dashoffset: 90
+    &.min
+        stroke-dashoffset: 145
+        stroke-width: 4
+    &.loaded
+        stroke-dashoffset: 0

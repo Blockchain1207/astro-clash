@@ -1,0 +1,13 @@
+@import ../../styles/helpers
+
+.tooltip
+    height: 20px
+    cursor: pointer
+    svg
+        fill: $n5
+        transition: fill .2s
+    &:hover
+        svg
+            fill: $n7
+            +dark
+                fill: $n2

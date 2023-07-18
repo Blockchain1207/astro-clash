@@ -1,0 +1,123 @@
+@import ../../styles/helpers
+
+.title
+    margin-bottom: 24px
+
+.tabs
+    margin-bottom: 32px
+    height: 48px
+    display: flex
+    align-items: center
+    padding: 4px
+    border-radius: 12px
+    background-color: $s1
+    +dark
+        background-color: $s5
+
+button.tab
+    height: 40px
+    flex-basis: 50%
+    border-radius: 8px
+    background-color: transparent
+    +base2
+    color: $n6
+    +trans
+    +dark
+        color: $n5
+    &.active
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08), inset 0px 1px 0px #FFFFFF
+        background-color: $n2
+        color: inherit
+        +dark
+            background-color: $n7
+            box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.31), inset 0px 1px 1px rgba(255, 255, 255, 0.05)
+            color: $n2
+
+.upload
+    position: relative
+
+.loader
+    position: absolute
+    z-index: 2
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    align-items: center
+    flex-direction: column
+
+.remove
+    position: absolute
+    z-index: 3
+    right: 0
+    height: 32px
+    width: 32px
+    border-radius: 50%
+    background-color: $n8
+    line-height: 0
+    svg
+        fill: $n1
+
+.status
+    margin-top: 20px
+
+.upload_file
+    margin-bottom: 32px
+    padding: 56px 0
+    &.disabled
+        > div
+            opacity: 0
+
+.confirm
+    width: 100%
+
+.note
+    margin-bottom: 32px
+    text-align: center
+    +caption1
+    color: $n6
+    +dark
+        color: $n5
+
+.avatars
+    margin-bottom: 32px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 48px 32px
+
+.avatar
+    position: relative
+    z-index: 1
+    margin: 0 8px
+    height: 64px
+    width: 64px
+    flex-shrink: 0
+    border-radius: 50%
+    overflow: hidden
+    cursor: pointer
+    .check
+        opacity: 0
+        position: absolute
+        z-index: 1
+        margin: 2px
+        width: calc(100% - 4px)
+        height: calc(100% - 4px)
+        display: flex
+        align-items: center
+        justify-content: center
+        box-shadow: 0 0 0 4px $n1 inset, 0 0 0 4px #1863F9
+        border-radius: 50%
+        overflow: hidden
+        background-color: rgba($n9, .8)
+        +trans
+        svg
+            fill: $n1
+    +m
+        &:last-child
+            display: none
+
+    &.selected
+        .check
+            box-shadow: 0 0 0 2px $n1 inset, 0 0 0 2px #1863F9
+            opacity: 1

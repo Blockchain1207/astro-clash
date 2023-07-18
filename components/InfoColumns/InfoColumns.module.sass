@@ -1,0 +1,76 @@
+@import ../../styles/helpers
+
+.section
+    background-color: $n3
+    +t
+        padding: 64px 0
+    +dark
+        background-color: $n9
+
+.head
+    max-width: 480px
+    margin: 0 auto 64px
+    text-align: center
+    +t
+        margin: 0 auto 32px
+
+.title
+    margin-bottom: 12px
+    +m
+        margin: 0 auto 14px
+        max-width: 280px
+        +h3
+
+.info
+    font-size: 24px
+    line-height: 36px
+    letter-spacing: -.02em
+    font-weight: 500
+    color: $n5
+    +t
+        +body2
+
+.list
+    display: flex
+    margin: 0 -40px
+    +d
+        margin: 0 -16px
+    +t
+        flex-direction: column
+        margin: 0
+
+.item
+    flex: 0 0 33.333%
+    padding: 0 40px
+    +t
+        padding: 24px 0
+    +nl
+        border-right: 1px solid $n4
+        +t
+            border-right: none
+            border-bottom: 1px solid $n4
+        +dark
+            border-color: $n7
+    &:last-child
+        padding-bottom: 0
+
+.preview
+    position: relative
+    margin-bottom: 12px
+    +t
+        margin: 0 128px
+    +m
+        // display: flex
+        // align-items: center
+        // justify-content: center
+        margin: 0 20px 24px
+
+.subtitle
+    margin-bottom: 20px
+    +m
+        +h5
+
+.content
+    color: $n6
+    +dark
+        color: $n5

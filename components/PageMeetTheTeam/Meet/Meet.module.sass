@@ -1,0 +1,38 @@
+@import ../../../styles/helpers
+
+.container
+    padding-top: 136px
+    +t
+        padding-top: 80px
+    +m
+        padding-top: 32px
+
+.title
+    text-align: center
+    margin-bottom: 48px
+    +m
+        +h3
+
+.list
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -11px
+    +t
+        margin: 0 -16px
+    +m
+        margin: 0
+        flex-direction: column
+        align-content: center
+
+.item
+    flex: 0 0 calc(33.333% - 22px)
+    width: calc(33.333% - 22px)
+    margin: 0 11px
+    +t
+        flex: 0 0 calc(33.333% - 40px)
+        width: calc(33.333% - 40px)
+        margin: 0 20px
+    +m
+        flex: 0 0 100%
+        width: 100%
+        margin: 0

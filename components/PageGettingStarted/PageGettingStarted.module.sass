@@ -1,0 +1,84 @@
+@import ../../styles/helpers
+
+.container
+    padding: 136px 32px 108px
+    text-align: center
+
+.title
+    max-width: 708px
+    margin: 0 auto 32px
+    text-align: center
+    +t
+        +h1
+    +m
+        max-width: 343px
+        +h2
+
+.list
+    margin: 112px auto 0
+    width: 100%
+    display: flex
+    justify-content: space-between
+    position: relative
+    +t
+        margin: 70px auto 0
+    +m
+        flex-direction: column
+        align-items: center
+
+.item
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 330px
+    +t
+        max-width: 228px
+    +m
+        max-width: 280px
+        +nf
+            margin-top: 64px
+
+.preview
+    margin-bottom: 16px
+    +m
+        margin-bottom: -32px
+
+.number
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $n1
+    margin-bottom: 16px
+    box-shadow: 0 0 0 16px $n2
+    +dark
+        box-shadow: 0 0 0 16px $n8
+    &::after, &::before
+        display: block
+        position: absolute
+        width: 100%
+        height: 1px
+        background-color: $n4
+        z-index: -1
+        +dark
+            background-color: $n7
+        +m
+            display: none
+
+.item
+    +nl
+        .number
+            &::before
+                content: ''
+                left: 50%
+    +nf
+        .number
+            &::after
+                content: ''
+                right: 50%
+
+.note
+    max-width: 240px

@@ -1,0 +1,30 @@
+@import ../../../styles/helpers
+
+.container
+    min-height: 100vh
+    display: flex
+    align-items: center
+    +m
+        min-height: auto
+        display: block
+        +nl
+            margin-bottom: 50px
+
+.wrap
+    max-width: 400px
+    margin-right: auto
+    +m
+        max-width: 100%
+        margin-bottom: 40px
+
+.title
+    margin-bottom: 24px
+
+.content
+    color: $n6
+    +dark
+        color: $n5
+
+.preview
+    +m
+        text-align: center

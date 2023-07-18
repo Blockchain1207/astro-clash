@@ -1,0 +1,113 @@
+@import ../../../styles/helpers
+
+.section
+    padding: 164px 0 158px
+    background: $n3
+    overflow: hidden
+    +d
+        padding: 128px 0 64px
+    +t
+        padding: 128px 0 0 0
+    +dark
+        background: $n9
+
+.container
+    max-width: 1408px
+
+.images
+    position: relative
+    margin-bottom: 28px
+
+.preview
+    position: relative
+    z-index: 2
+    padding-left: 10px
+    text-align: center
+
+.planets
+    position: absolute
+    z-index: 2
+    +trans(all, .8s, ease)
+    +m
+        display: none
+    &.planet_1
+        bottom: -10%
+        left: calc(50% - 458px)
+    &.planet_2
+        bottom: 6%
+        right: calc(50% - 443px)
+
+.spheres
+    position: absolute
+    z-index: 1
+    +trans(all, .8s, ease)
+    border-radius: 50%
+    background: radial-gradient(89.38% 89.38% at 18.75% 10.62%, #F7F6F3 0%, #DFDDDA 94.27%)
+    +dark
+        background: radial-gradient(89.38% 89.38% at 18.75% 10.62%, #313540 0%, #171A20 94.27%)
+    +m
+        display: none
+    &.sphere_1
+        width: 32px
+        height: 32px
+        left: calc(50% - 535px)
+        bottom: 40%
+    &.sphere_2
+        width: 60px
+        height: 60px
+        left: calc(50% - 200px)
+        bottom: 34%
+        filter: blur(5px)
+        +m
+            display: none
+    &.sphere_3
+        width: 16px
+        height: 16px
+        bottom: 13%
+        right: calc(50% - 284px)
+    &.sphere_4
+        width: 20px
+        height: 20px
+        right: calc(50% - 514px)
+        bottom: 40%
+
+// .preview
+//     &:nth-child(1)
+//         padding-left: 10px
+//         text-align: center
+//     &:nth-child(2)
+//         top: -19%
+//         left: calc(50% - 540px)
+//     &:nth-child(3)
+//         left: calc(50% - 475px)
+//         bottom: 16%
+//     &:nth-child(4)
+//         left: calc(50% - 300px)
+//         bottom: 40%
+//     &:nth-child(5)
+//         top: 14%
+//         right: calc(50% - 245px)
+//     &:nth-child(6)
+//         top: 29%
+//         right: calc(50% - 425px)
+//     &:nth-child(7)
+//         right: calc(50% - 534px)
+//         bottom: 17.5%
+//     &:not(:first-child)
+//         position: absolute
+
+.title
+    margin-bottom: 130px
+    text-align: center
+    +d
+        margin-bottom: 90px
+        +h2
+    +t
+        margin-bottom: 52px
+        +h4
+
+.item
+    &:not(:last-child)
+        border-bottom: 1px solid $n4
+        +dark
+            border-color: $n7

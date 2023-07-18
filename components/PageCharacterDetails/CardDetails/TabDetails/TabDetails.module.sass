@@ -1,0 +1,22 @@
+@import ../../../../styles/helpers
+
+.details
+    +m
+        flex-direction: column
+        > div
+            +nl
+                margin-bottom: 24px
+
+.item
+    &:not(:last-child)
+        margin-bottom: 32px
+        padding-bottom: 32px
+        border-bottom: 1px solid $n4
+        +dark
+            border-color: $n7
+
+.content
+    margin-bottom: 32px
+    color: $n6
+    +dark
+        color: $n5

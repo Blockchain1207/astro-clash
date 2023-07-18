@@ -1,0 +1,125 @@
+@import ../../styles/helpers
+
+.title
+    margin-bottom: 24px
+
+.info
+    margin-bottom: 24px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border-radius: 12px
+    padding: 20px
+    background-color: $s3
+    +dark
+        background-color: $s2
+    > div
+        +nf
+            text-align: right
+
+.location
+    display: flex
+    align-items: center
+    color: $n5
+    +base2S
+    svg
+        margin-right: 8px
+        fill: $n5
+
+.crypto
+    color: $green
+
+.price
+    +base2S
+    color: $n5
+
+.exchange
+    margin-bottom: 24px
+    display: flex
+    padding: 0 20px
+    color: $n5
+    +base2S
+    svg
+        margin-right: 8px
+        fill: $n6
+    .value
+        margin-left: auto
+        color: $n8
+        +base2
+        +dark
+            color: $n2
+
+.confirm
+    margin-bottom: 24px
+    width: 100%
+
+.note
+    padding: 12px
+    text-align: center
+    color: $n5
+    +caption2
+    span
+        color: $n8
+        +dark
+            color: $n2
+
+.centered
+    display: flex
+    align-items: center
+    flex-direction: column
+    padding: 56px 0
+    text-align: center
+
+.loader
+    margin-bottom: 24px
+
+.waiting
+    .subtitle, .text
+        max-width: 300px
+
+.subtitle
+    margin-bottom: 8px
+
+.text
+    color: $n6
+    +dark
+        color: $n5
+    span.red
+        color: $red
+    span.dark
+        color: $n8
+        +dark
+            color: $n2
+
+.icon
+    margin-bottom: 24px
+    width: 128px
+    height: 128px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    &.success
+        background-color: rgba($green, .2)
+        svg
+            fill: $green
+    &.error
+        background-color: rgba($red, .2)
+        svg
+            fill: $red
+
+.explore
+    margin-top: 20px
+    display: flex
+    align-items: center
+    color: $red
+    +base2
+    svg
+        margin-left: 12px
+        fill: $red
+
+button.retry
+    margin-top: 20px
+
+.blink
+    opacity: 0

@@ -1,0 +1,41 @@
+@import ../../styles/helpers
+
+.container
+    position: relative
+    width: 100%
+
+.upload
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 2px dashed $n4
+    border-radius: 12px
+    background-color: $n3
+    +dark
+        border-color: $n7
+        background-color: $n8
+
+.details
+    text-align: center
+    line-height: 0
+    svg.icon
+        margin-bottom: 24px
+        &.min
+            margin-bottom: 8px
+        path
+            fill-rule: evenodd
+            +dark
+                fill: $n2
+    .note
+        +caption1
+        color: $n5
+
+input.file
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    width: 100%
+    opacity: 0
+    cursor: pointer

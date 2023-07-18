@@ -1,0 +1,53 @@
+@import ../../../styles/helpers
+
+.list
+    display: flex
+    flex-wrap: wrap
+    margin: -40px -17px 0
+    +d
+        margin: -40px -8px 0
+    +m
+        margin: -40px 0 0
+    &_2
+        margin: -40px -20px 0
+        +d
+            margin: -40px -8px 0
+        +m
+            margin: -40px 0 0
+        .card
+            flex: 0 0 calc(50% - 40px)
+            width: calc(50% - 40px)
+            margin: 40px 20px 0
+            +d
+                flex: 0 0 calc(50% - 16px)
+                width: calc(50% - 16px)
+                margin: 40px 8px 0
+            +m
+                flex: 0 0 100%
+                width: 100%
+                margin: 40px 0 0
+
+.card
+    flex: 0 0 calc(33.333% - 34px)
+    width: calc(33.333% - 34px)
+    margin: 40px 17px 0
+    +d
+        flex: 0 0 calc(33.333% - 16px)
+        width: calc(33.333% - 16px)
+        margin: 40px 8px 0
+    +t
+        flex: 0 0 calc(50% - 16px)
+        width: calc(50% - 16px)
+        margin: 40px 8px 0
+    +m
+        flex: 0 0 100%
+        width: 100%
+        margin: 40px 0 0
+
+.btns
+    margin-top: 64px
+    text-align: center
+
+.button
+    .loader
+        margin: 0 18px 0 10px

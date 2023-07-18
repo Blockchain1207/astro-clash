@@ -1,0 +1,136 @@
+@import ../../../../styles/helpers
+
+.slide
+    position: relative
+    overflow: hidden
+
+.container
+    max-width: 1408px
+    +t
+        margin-top: 104px
+
+.head
+    position: absolute
+    top: 168px
+    left: 50%
+    display: flex
+    justify-content: center
+    transform: translateX(-50%)
+    +t
+        position: relative
+        top: 0
+        left: 0
+        transform: translateX(0)
+        display: block
+        margin-bottom: 32px
+
+.title
+    flex-shrink: 0
+    width: 650px
+    text-align: center
+    white-space: nowrap
+    +d
+        +h3
+    +t
+        width: auto
+        text-align: left
+    &:nth-child(1)
+        padding-right: 56px
+        text-align: right
+        color: $n4
+        +d
+            padding-right: 40px
+        +t
+            display: none
+        +dark
+            color: $n7
+    &:nth-child(3)
+        padding-left: 56px
+        text-align: left
+        color: $n4
+        +d
+            padding-left: 40px
+        +t
+            display: none
+        +dark
+            color: $n7
+
+.row
+    display: flex
+    +t
+        display: block
+
+.col
+    flex: 0 0 313px
+    padding-bottom: 66px
+    &:nth-child(1)
+        padding-top: 400px
+        padding-right: 56px
+        +d
+            padding-top: 232px
+            padding-right: 40px
+            flex-basis: 234px !important
+        +t
+            padding: 0
+    &:nth-child(2)
+        flex-grow: 1
+        border-width: 0 1px
+        border-style: solid
+        border-color: $n4
+        padding-top: 292px
+        +dark
+            border-color: $n7
+        +t
+            border: none
+            padding-top: 16px
+    &:nth-child(3)
+        padding-top: 400px
+        padding-left: 56px
+        +d
+            padding-top: 232px
+            padding-left: 40px
+            flex-basis: 234px !important
+        +t
+            display: none
+
+.subtitle
+    margin-bottom: 12px
+    +d
+        +h5
+
+.content
+    color: $n6
+    +dark
+        color: $n5
+
+.pagination
+    margin: 48px -56px 0 0
+    padding: 48px 56px 0 0
+    border-top: 1px solid $n4
+    +archivo
+    font-size: 32px
+    line-height: 40px
+    font-weight: 700
+    letter-spacing: -0.02em
+    color: $n5
+    +d
+        margin: 36px -40px 0 0
+        padding: 36px 40px 0 0
+        +h6
+    +t
+        display: none
+    +dark
+        border-color: $n7
+    span
+        margin-right: 10px
+        font-size: 80px
+        line-height: 88px
+        color: $n8
+        +d
+            +h1
+        +dark
+            color: $n2
+
+.preview
+    text-align: center
+    padding: 0 12px

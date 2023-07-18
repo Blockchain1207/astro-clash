@@ -1,0 +1,86 @@
+@import ../../../styles/helpers
+
+.wrapper
+    position: relative
+    width: 100%
+    height: 378px
+    +m
+        height: 280px
+    &.min
+        height: 180px
+
+.container
+    height: 100%
+
+.cover
+    position: relative
+    height: 100%
+    img
+        border-radius: 32px
+        object-fit: cover
+        +m
+            border-radius: 20px
+    &.min
+        img
+            border-radius: 15px
+
+.uploading
+    position: absolute
+    z-index: 10
+    right: 24px
+    top: 24px
+    display: flex
+    align-items: center
+    +base2S
+    svg
+        margin-right: 8px
+    &.min
+        top: -32px
+        color: $green
+
+.loader
+    position: absolute
+    right: 0
+    top: 0
+    bottom: 0
+    background-color: rgba($n1, .75)
+    z-index: 8
+
+.edit
+    position: absolute
+    right: 32px
+    bottom: 32px
+    border-color: rgba($n1, .50)
+    color: $n2
+    +m
+        display: none
+    &:hover
+        border-color: $n1
+
+.buttons
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    opacity: 0
+    +trans
+    &:hover
+        opacity: 1
+
+.circle_button
+    margin: 0 6px
+    height: 40px
+    width: 40px
+    border-radius: 50%
+    background-color: $n1
+    line-height: 0
+    svg
+        fill: $n8
+    +nl
+        background-color: rgba($n9, .8)
+        svg
+            fill: $n1

@@ -1,0 +1,161 @@
+@import ../../styles/helpers
+
+.title
+    margin-bottom: 24px
+
+.info
+    margin-bottom: 24px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border-radius: 12px
+    padding: 20px
+    background-color: $s3
+    +dark
+        background-color: $n7
+    > div
+        +nf
+            text-align: right
+
+.location
+    display: flex
+    align-items: center
+    color: $n5
+    +base2S
+    svg
+        margin-right: 8px
+        fill: $n5
+
+.crypto
+    color: $green
+
+.price
+    +base2S
+    color: $n5
+
+.exchange
+    margin-bottom: 24px
+    display: flex
+    padding: 0 20px
+    color: $n5
+    +base2S
+    svg
+        margin-right: 8px
+        fill: $n6
+        +dark
+            fill: $n5
+    .value
+        margin-left: auto
+        color: $n8
+        +base2
+        +dark
+            color: $n2
+
+.confirm
+    margin-bottom: 24px
+    width: 100%
+
+.note
+    padding: 12px
+    text-align: center
+    color: $n5
+    +caption2
+    span
+        color: $n8
+        +dark
+            color: $n2
+
+.centered
+    display: flex
+    align-items: center
+    flex-direction: column
+    padding: 56px 0
+    text-align: center
+
+.loader
+    margin-bottom: 24px
+
+.set_price
+    .subtitle
+        margin-bottom: 24px
+
+.subtitle
+    margin-bottom: 8px
+
+.text
+    color: $n6
+    +dark
+        color: $n5
+    span.red
+        color: $red
+    span.dark
+        color: $n8
+
+.icon
+    margin-bottom: 24px
+    width: 128px
+    height: 128px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    &.success
+        background-color: rgba($green, .2)
+        svg
+            fill: $green
+    &.error
+        background-color: rgba($red, .2)
+        svg
+            fill: $red
+
+.explore
+    margin-top: 20px
+    display: flex
+    align-items: center
+    color: $red
+    +base2
+    svg
+        margin-left: 12px
+        fill: $red
+
+button.retry
+    margin-top: 20px
+
+.view
+    margin-top: 20px
+    width: 100%
+
+.set_price
+    padding: 56px 0 12px 0
+    .subtitle
+        max-width: 300px
+    .note
+        margin-bottom: 32px
+        padding: 0
+    button.continue
+        width: 100%
+
+.field_price
+    position: relative
+    margin-bottom: 24px
+    .currency
+        position: absolute
+        z-index: 2
+        top: calc(50%)
+        transform: translateY(-50%)
+        right: 16px
+        display: flex
+        align-items: center
+        color: #627EEA
+        +h6
+        span
+            margin-right: 12px
+    input.input
+        padding: 0 100px 0 16px
+        border-color: $n3
+        background-color: $n1
+        color: $n5
+        +h6
+        +dark
+            border-color: $n7
+            background-color: $n9

@@ -1,0 +1,106 @@
+@import ../../../styles/helpers
+
+.section
+    position: relative
+
+.container
+    display: flex
+    align-items: center
+    +d
+        min-height: 728px
+    +m
+        display: block
+        margin: 64px 0
+
+.wrap
+    max-width: 420px
+    margin: 0 32px 0 auto
+    +d
+        margin: 0 0 0 auto
+    +m
+        margin: 0 auto
+        max-width: 100%
+
+.title
+    margin-bottom: 16px
+    +m
+        max-width: 380px
+        +h3
+
+.info
+    margin-bottom: 32px
+    color: $n6
+    +dark
+        color: $n5
+
+.box
+    box-shadow: 0px 64px 128px -64px rgba(220, 215, 204, 0.45)
+    background-color: $n1
+    padding: 32px
+    border-radius: 24px
+    text-align: center
+    +dark
+        box-shadow: 0px 64px 128px -64px rgba(0, 0, 0, 0.25)
+        border: 2px solid $s4
+        background-color: $n9
+
+.line
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 24px
+
+.subtitle
+    margin-right: 16px
+
+.date
+    padding: 4px 12px
+    box-shadow: 0 0 0 2px rgba($green, .3)
+    border-radius: 6px
+    +caption2
+    color: $green
+
+.timer
+    display: flex
+    margin: 0 -32px 24px
+    padding-bottom: 24px
+    border-bottom: 1px solid $n4
+    +dark
+        border-color: $n7
+
+.indicator
+    flex: 0 0 25%
+    width: 25%
+    &:not(:last-child)
+        border-right: 1px solid $n4
+        +dark
+            border-color: $n7
+
+.note
+    +caption2
+    color: $n5
+
+.text
+    margin-bottom: 12px
+    +base2
+
+.button
+    width: 100%
+
+.preview
+    position: absolute
+    top: 50%
+    left: calc(50% - 614px)
+    transform: translateY(-50%)
+    +d
+        width: 574px
+        height: 574px
+    +m
+        position: relative
+        top: auto
+        left: auto
+        transform: translateY(0)
+        margin: 0 auto 32px auto
+        max-width: 400px
+        width: 100%
+        height: auto

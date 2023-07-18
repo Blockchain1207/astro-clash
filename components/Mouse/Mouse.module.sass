@@ -1,0 +1,30 @@
+@import ../../styles/helpers
+
+.mouse
+    display: flex
+    align-items: center
+    +t
+        flex-direction: column
+    +m
+        display: none
+
+.icon
+    flex: 0 0 24px
+    position: relative
+    top: -1px
+    height: 24px
+    margin-right: 8px
+    & > div
+        transform: scale(1.5)
+
+.title
+    +base2
+
+.centered
+    display: block
+    +m
+        display: none
+    .icon
+        margin: 0 auto 8px
+    .title
+        text-align: center

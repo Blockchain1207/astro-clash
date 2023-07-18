@@ -1,0 +1,168 @@
+@import ../../styles/helpers
+
+.card
+    display: block
+    color: $n8
+    &:hover
+        .details
+            visibility: visible
+            opacity: 1
+
+.preview
+    position: relative
+    margin-bottom: 20px
+    border-radius: 16px
+    overflow: hidden
+    isolation: isolate
+    transform: translateZ(0)
+    &:before
+        content: ""
+        display: block
+        padding-bottom: 100%
+    &_big
+        &:before
+            padding-bottom: 77%
+
+.image
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.labels
+    position: absolute
+    top: 16px
+    right: 16px
+    z-index: 2
+    display: flex
+
+.status
+    &:not(:last-child)
+        margin-right: 8px
+
+.details
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background: rgba($n9, .9)
+    visibility: hidden
+    opacity: 0
+    transition: all .2s
+    isolation: isolate
+    transform: translateZ(0)
+    .favorite
+        position: absolute
+        top: 20px
+        left: 20px
+
+.button
+    &:not(:last-child)
+        margin-bottom: 12px
+
+.buttonDetails
+    color: $n2
+    &:hover
+        border-color: transparent
+        background-color: $n2
+        color: inherit
+
+.stat
+    display: flex
+    align-items: center
+
+.code
+    margin-right: auto
+
+.crypto
+    padding: 0 6px
+    border-radius: 8px
+    border: 2px solid rgba($green, .25)
+    +base2
+    color: $green
+
+.info
+    display: flex
+    align-items: center
+    margin-top: 4px
+
+.title
+    margin-right: auto
+    +dark
+        color: $n2
+
+.price
+    flex-shrink: 0
+    margin-left: 20px
+    +caption2
+    color: $n6
+    +dark
+        color: $n5
+
+.location
+    margin-top: 16px
+    padding-top: 16px
+    border-top: 1px solid $n4
+    +caption2
+    color: $green
+    +dark
+        border-color: $n7
+    svg
+        position: relative
+        margin-right: 4px
+        margin-bottom: -5px
+        fill: $green
+    span
+        color: $n5
+
+.foot
+    display: flex
+    align-items: center
+    margin-top: 16px
+    padding-top: 16px
+    border-top: 1px solid $n4
+    +dark
+        border-color: $n7
+
+.level
+    display: flex
+    align-items: center
+    +caption2
+    color: $n6
+    +dark
+        color: $n5
+    svg
+        position: relative
+        margin-right: 4px
+        fill: $n6
+        +dark
+            fill: $n5
+    span
+        margin-left: 2px
+        color: $green
+
+.avatars
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-left: auto
+
+.avatar
+    display: flex
+    border-radius: 50%
+    overflow: hidden
+    &:not(:last-child)
+        margin-right: 12px
+
+.details_bottom
+    +trans(opacity, 0.25s)

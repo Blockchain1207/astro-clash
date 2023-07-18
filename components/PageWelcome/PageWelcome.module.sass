@@ -1,0 +1,45 @@
+@import ../../styles/helpers
+
+.container
+    padding: 136px 32px 108px
+    text-align: center
+    +t
+        padding: 100px 32px 56px
+    +m
+        padding: 92px 32px 32px
+
+.title
+    margin-bottom: 48px
+    +t
+        margin-bottom: 4px
+        +h2
+    +m
+        +h3
+
+.info
+    margin-bottom: 40px
+    color: $n6
+    +dark
+        color: $n5
+    +t
+        margin-bottom: 32px
+
+.cards
+    margin-bottom: 32px
+    display: flex
+    justify-content: center
+    +m
+        display: block
+
+.note
+    margin-bottom: 16px
+    color: $n6
+    +base1M
+    +dark
+        color: $n5
+    a
+        color: $red
+
+.button
+    +m
+        width: 100%

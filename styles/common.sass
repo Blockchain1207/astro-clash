@@ -1,0 +1,36 @@
+body
+    width: 100%
+    min-width: 375px
+    background: $n2
+    color: $n8
+    +inter
+    +body2
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    +dark-body
+        background: $n8
+        color: $n2
+
+img
+    display: block
+    max-width: 100%
+    vertical-align: bottom
+
+a
+    text-decoration: none
+
+button
+    font-family: inherit
+
+.rc-tooltip-placement-right:not(.dark) .rc-tooltip-arrow
+    +dark-common
+        border-right-color: $n2
+
+.rc-tooltip-placement-left:not(.dark) .rc-tooltip-arrow
+    +dark-common
+        border-left-color: $n2
+
+.rc-tooltip:not(.dark) .rc-tooltip-inner
+    +dark-common
+        background-color: $n2
+        color: $n8

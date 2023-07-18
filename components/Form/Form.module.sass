@@ -1,0 +1,56 @@
+@import ../../styles/helpers
+
+.form
+    position: relative
+    flex-shrink: 0
+    &.formBig
+        .input
+            height: 80px
+            padding: 0 24px 0 62px
+            font-size: 22px
+            +m
+                height: 64px
+                padding: 0 24px 0 56px
+                +base1
+        .result
+            width: 58px
+            padding-left: 12px
+            +m
+                padding-left: 0
+
+.input
+    width: 100%
+    height: 48px
+    padding: 0 20px 0 44px
+    background: rgba($n4, .6)
+    border-radius: 12px
+    +base2S
+    color: $n8
+    font-family: inherit
+    +dark
+        background: $n7
+        color: $n1
+    &::placeholder
+        color: $n6
+        +dark
+            color: $n5
+            opacity: 1
+.result
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    width: 44px
+    padding-left: 4px
+    background: none
+    font-size: 0
+    svg
+        fill: $n6
+        transition: fill .2s
+        +dark
+            fill: $n5
+    &:hover
+        svg
+            fill: $n8
+            +dark
+                fill: $n2

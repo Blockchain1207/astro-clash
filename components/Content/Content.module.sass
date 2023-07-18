@@ -1,0 +1,42 @@
+@import ../../styles/helpers
+
+.content
+    color: $n6
+    +dark
+        color: $n5
+    p,
+    ul
+        &:not(:last-child)
+            margin-bottom: 32px
+    ul
+        li
+            position: relative
+            padding-left: 36px
+            +body2
+            color: $n6
+            +dark
+                color: $n5
+            &:before
+                content: ''
+                position: absolute
+                top: 1px
+                left: 0
+                width: 24px
+                height: 24px
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.444L9.26 17 19 7' stroke='%2330b38c' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat 50% 50% / 100% auto
+            &:not(:last-child)
+                margin-bottom: 16px
+
+.more
+    display: flex
+    align-items: center
+    margin-top: 32px
+    background: none
+    +base1
+    color: $red
+    transition: opacity .2s
+    svg
+        margin-left: 8px
+        fill: $red
+    &:hover
+        opacity: .85

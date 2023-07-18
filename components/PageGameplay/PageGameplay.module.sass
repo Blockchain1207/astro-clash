@@ -1,0 +1,63 @@
+@import ../../styles/helpers
+
+.wrapper
+    position: relative
+    +m
+        margin: 100px 0
+
+.sticky
+    position: absolute
+    z-index: 4
+    top: 0
+    bottom: 0
+    height: 100%
+    right: 48px
+    +d
+        right: 24px
+    +m
+        display: none
+
+.nav
+    position: sticky
+    top: 0
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    +trans
+
+.nav_btn
+    position: relative
+    margin: 12px 0
+    height: 48px
+    width: 6px
+    border-radius: 12px
+    background-color: $n4
+    +dark
+        background-color: $n7
+    &.active
+        background-color: transparent
+    &::before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 6px
+        height: 48px
+        border-radius: 12px
+        border: 3px solid transparent
+        transform: translate(-50%, -50%)
+        transition: width .15s
+    &.active
+        &::before
+            width: 12px
+            border: 4px solid $red
+
+.fullpage
+    min-height: 100vh
+    display: flex
+    align-items: center
+    +d
+        margin-bottom: 64px
+    +m
+        margin-bottom: 32px

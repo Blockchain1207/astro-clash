@@ -1,0 +1,52 @@
+@import ../../../../styles/helpers
+
+.item
+    &:not(:last-child)
+        margin-bottom: 40px
+        padding-bottom: 40px
+        border-bottom: 1px solid $n4
+        +dark
+            border-color: $n7
+        +m
+            margin-bottom: 32px
+            padding-bottom: 32px
+
+.category
+    margin-bottom: 20px
+    +base2
+    color: $n5
+
+.add
+    display: flex
+    align-items: center
+    background: none
+    +base2
+    color: $n8
+    &:hover
+        .icon
+            border-color: $n8
+
+.icon
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 48px
+    height: 48px
+    margin-right: 16px
+    border-radius: 50%
+    border: 2px solid $n4
+    border-radius: 50%
+    transition: border-color .2s
+
+.parameters
+    +t
+        > div
+            width: 50%
+            +nl
+                margin-right: 14px
+    +m
+        display: block !important
+        > div
+            width: 100%
+            +nf
+                margin-top: 24px

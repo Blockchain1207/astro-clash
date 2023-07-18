@@ -1,0 +1,66 @@
+@import ../../../../styles/helpers
+
+.card
+    position: relative
+    display: flex
+    flex-direction: column
+
+.preview
+    margin-bottom: 12px
+    border-radius: 16px
+    background-color: $s1
+    +dark
+        background-color: $n7
+    &::before
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+.thumbnails
+    flex-grow: 1
+    position: relative
+
+.thumbnail
+    margin: 0 auto
+    height: 100%
+    width: calc(33.33% - 8px)
+    padding-bottom: calc(33.3333% - 8px)
+    border-radius: 12px
+    background-color: $s1
+    +dark
+        background-color: $n7
+    &::after, &::before
+        position: absolute
+        content: ""
+        display: block
+        height: inherit
+        width: calc(33.3333% - 8px)
+        border-radius: 12px
+        background-color: $s1
+        +dark
+            background-color: $n7
+    &::after
+        right: 0
+    &::before
+        left: 0
+
+.lines
+    margin-top: 28px
+    margin: 24px 0 4px
+    height: 20px
+    width: 120px
+    border-radius: 4px
+    background-color: $s1
+    +dark
+        background-color: $n7
+    &::after
+        position: absolute
+        right: 0
+        height: inherit
+        width: 68px
+        content: ""
+        display: block
+        border-radius: 4px
+        background-color: $s1
+        +dark
+            background-color: $n7
